@@ -1,0 +1,4941 @@
+/*#mastHead #mastHead_signin_search
+	CORE CSS DEFINITIONS
+	=============================
+	Author:		the white agency
+	Born:		25/08/07
+	Modified:
+	Project:	Ticketek
+
+	CONTENTS
+	==============================
+	$1 - Global resets
+	$2 - Links
+	$3 - Typography
+	$4 - Global Lists & Clearing
+	$5 - Page Structures
+	$6 - Masthead & Navigation
+	$7 - The Footer
+	$8 - Forms
+	$9 - Error message container
+	$10 - Social Media Plugins
+	$11 - Floating bar
+*/
+
+/* $1 - Global Resets.
+To change font sizes please use the metric 1em = 10px, 1.2em = 12px
+============================================================================== */
+
+/*
+	COLOURS
+	White --------- #fff
+	Blue ---------- #00ACED
+    Green --------- #6AC63F
+	Yellow -------- #FEE949
+	Darkest Grey -- #434343
+	Dark Grey ----- #555
+	Grey ---------- #dbdbdb
+	Light Grey ---- #ebebeb
+	Lightest Grey - #f3f3f3
+*/
+
+
+/* Font Definition for Open Sans.
+	Light:       200
+	Regular:     400
+	Semi Bold:   500
+	Bold:        700
+	Extra Bold:  900
+*/
+
+/* Light */
+@font-face {
+    font-family: 'Open Sans';
+    src: url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Light-webfont.eot");
+    src: url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Light-webfont.eot?#iefix") format('embedded-opentype'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Light-webfont.woff") format('woff'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Light-webfont.ttf") format('truetype'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Light-webfont.svg#OpenSansLight") format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+/* Regular */
+@font-face {
+    font-family: 'Open Sans';
+    src: url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Regular-webfont.eot");
+    src: url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Regular-webfont.eot?#iefix") format('embedded-opentype'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Regular-webfont.woff") format('woff'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Regular-webfont.ttf") format('truetype'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Regular-webfont.svg#OpenSansRegular") format('svg');
+    font-weight: normal;
+    font-weight: 400;
+    font-style: normal;
+}
+/* Semibold */
+@font-face {
+    font-family: 'Open Sans';
+    src: url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Semibold-webfont.eot");
+    src: url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Semibold-webfont.eot?#iefix") format('embedded-opentype'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Semibold-webfont.woff") format('woff'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Semibold-webfont.ttf") format('truetype'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Semibold-webfont.svg#OpenSansSemibold") format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+/* Bold */
+@font-face {
+    font-family: 'Open Sans';
+    src: url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Bold-webfont.eot");
+    src: url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Bold-webfont.eot?#iefix") format('embedded-opentype'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Bold-webfont.woff") format('woff'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Bold-webfont.ttf") format('truetype'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-Bold-webfont.svg#OpenSansBold") format('svg');
+    font-weight: bold;
+    font-weight: 700;
+    font-style: normal;
+}
+/* Extra Bold */
+@font-face {
+    font-family: 'Open Sans';
+    src: url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-ExtraBold-webfont.eot");
+    src: url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-ExtraBold-webfont.eot?#iefix") format('embedded-opentype'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-ExtraBold-webfont.woff") format('woff'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-ExtraBold-webfont.ttf") format('truetype'), url("https://premier.ticketek.co.nz/fonts/open-sans/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold") format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 62.5% 'Open Sans', Arial, Helvetica, sans-serif;
+    color: #555;
+    text-align: center;
+    background-color: #ebebeb;
+    border-bottom: 58px solid transparent;
+    /* room for floating bar */
+    /*padding-bottom:58px; - cannot modify padding as is overridden by greybox.css*/
+    -webkit-text-size-adjust: auto;
+}
+
+img, img a {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.sr-only {
+    position: absolute !important;
+    clip: rect(1px,1px,1px,1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+.overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    /*top be above floater*/
+    opacity: 0.3;
+    filter: alpha(opacity = 30); /*IE* Support for Opacity*/
+    background-color: black;
+}
+/* $2 - Links
+============================================================================== */
+
+a {
+    text-decoration: none;
+    color: #00ACED;
+}
+
+    a:hover {
+        text-decoration: none;
+        color: #00C0ED;
+        /*transition: 0.25s ease;*/
+    }
+
+    a.yellowLink {
+        color: #ffd41f;
+    }
+
+#sessionTimeDiv a {
+    color: #555;
+}
+
+.wrapBodyNew a {
+    font-weight: 500;
+}
+
+.help {
+    display: inline-block;
+    margin: 2px 5px;
+    border: 1px solid #EBEBEB;
+    border-radius: 8px;
+    height: 15px;
+    width: 15px;
+    background-color: #F3F3F3;
+}
+
+a.help, a.help:hover, a.help:active {
+    display: none;
+}
+
+.help:after {
+    content: "?";
+    display: block;
+    color: #555;
+    padding: 2px 0 0 4px;
+    line-height: 1em;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.see-more-summary {
+    position: relative;
+}
+
+.balloon {
+    z-index: 99;
+    display: block;
+    position: absolute;
+    min-width: 100px;
+    max-width: 250px;
+    /*box-shadow: 0 0 5px #999;*/
+    border: 1px solid #484848;
+    background-color: #484848;
+    padding: 10px;
+    text-align: left;
+    color: #FFF;
+}
+
+.with-overlay .balloon {
+    z-index: 10100;
+}
+
+.tickets-page .with-overlay .balloon {
+    max-width: 500px !important;
+}
+
+.tickets-page .specialAccess .specialAccessHeader {
+    float: right;
+    background-position: 0px 0px;
+    padding-top: 0px;
+    min-height: 35px;
+    padding-top: 3px;
+    display: none;
+}
+
+.tickets-page #templated-alert-message {
+    float: left;
+}
+
+.tickets-page .specialAccess .specialAccessBody {
+    background-color: #ffffff;
+    float: right;
+    margin-bottom: 0;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.see-more-summary .balloon {
+    max-width: inherit;
+    width: 350px;
+}
+
+#templated-alert-message-content {
+    margin-top: 20px;
+}
+
+.see-more-popup-open {
+    color: inherit !important;
+}
+
+.balloon .caret {
+    position: absolute;
+    display: block;
+    color: #484848;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+    .balloon .caret.top, .balloon .caret.bottom {
+        -ms-transform: scaleX(1.8);
+        -webkit-transform: scaleX(1.8);
+        transform: scaleX(1.8);
+        left: 50%;
+        margin-left: -10px;
+    }
+
+        .balloon .caret.top:after {
+            content: "\25B2";
+        }
+
+    .balloon .caret.top {
+        top: -15px;
+        filter: progid:DXImageTransform.Microsoft.dropShadow(color=#999999, offX=0, offY=-1, positive=1);
+        -ms-filter: "progid:DXImageTransform.Microsoft.dropShadow(color=#999999, offX=0, offY=-1, positive=1)";
+        /*-ms-text-shadow: 0 -1px 0 #999, 0 -2px 1px #ccc;
+    -webkit-text-shadow: 0 -1px 0 #999, 0 -2px 1px #ccc;
+    text-shadow:  0 -1px 0 #999, 0 -2px 1px #ccc;*/;
+    }
+
+    .balloon .caret.bottom:after {
+        content: "\25BC";
+    }
+
+    .balloon .caret.bottom {
+        bottom: -18px;
+        filter: progid:DXImageTransform.Microsoft.dropShadow(color=#999999, offX=0, offY=1, positive=1);
+        -ms-filter: "progid:DXImageTransform.Microsoft.dropShadow(color=#999999, offX=0, offY=1, positive=1)";
+        /*-ms-text-shadow: 0 1px 0 #999, 0 3px 2px #ccc;
+    -webkit-text-shadow: 0 1px 0 #999, 0 3px 2px #ccc;
+    text-shadow:  0 1px 0 #999, 0 3px 2px #ccc;*/;
+    }
+
+    .balloon .caret.left, .balloon .caret.right {
+        -ms-transform: scaleY(1.8);
+        -webkit-transform: scaleY(1.8);
+        transform: scaleY(1.8);
+        top: 50%;
+        margin-top: -15px;
+    }
+
+        .balloon .caret.left:after {
+            content: "\25C0";
+        }
+
+    .balloon .caret.left {
+        left: -14px;
+        filter: progid:DXImageTransform.Microsoft.dropShadow(color=#999999, offX=-1, offY=0, positive=1);
+        -ms-filter: "progid:DXImageTransform.Microsoft.dropShadow(color=#999999, offX=-1, offY=0, positive=1)";
+        /*-ms-text-shadow: -1px 0 0 #999, -3px 0 2px #ccc;
+    -webkit-text-shadow: -1px 0 0 #999, -3px 0 2px #ccc;
+    text-shadow:  -1px 0 0 #999, -3px 0 2px #ccc;*/;
+    }
+
+    .balloon .caret.right:after {
+        content: "\25B6";
+    }
+
+    .balloon .caret.right {
+        right: -14px;
+        filter: progid:DXImageTransform.Microsoft.dropShadow(color=#999999, offX=1, offY=0, positive=1);
+        -ms-filter: "progid:DXImageTransform.Microsoft.dropShadow(color=#999999, offX=1, offY=0, positive=1)";
+        /*-ms-text-shadow: 1px 0 0 #999, 3px 0 2px #ccc;
+    -webkit-text-shadow: 1px 0 0 #999, 3px 0 2px #ccc;
+    text-shadow:  1px 0 0 #999, 3px 0 2px #ccc;*/;
+    }
+
+.balloon h6 {
+    font-size: 1.1em;
+    line-height: 1em;
+    padding: 0 0 0.5em 0;
+    margin: 0;
+}
+
+.balloon p {
+    margin: 5px 0 !important;
+}
+
+.see-more-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+    .see-more-popup-close a, .see-more-popup-close a:hover {
+        display: inline-block;
+        padding-right: 14px;
+        background-image: url("https://premier.ticketek.co.nz/images/cross-white.png");
+        background-position: right 0.5px;
+        background-repeat: no-repeat;
+        color: #FFF;
+    }
+/* $3 - Typography
+============================================================================== */
+h1 {
+    margin: 0;
+    padding: 0 0 8px 0;
+    color: #555;
+}
+
+h1 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #555;
+    font-weight: normal;
+}
+
+.wrapBodyNew h1 {
+    color: #00ACED;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: none;
+    height: auto;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.1em;
+    color: #555;
+    margin: 0 0 8px 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.wrapBodyNew h3 {
+    color: #00ACED;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h4 {
+    margin: 0 0 8px 0;
+    padding: 0;
+}
+
+h6 {
+    font-size: 1.2em;
+}
+
+.contentColumn span {
+    color: #555;
+}
+
+p {
+    margin: 0px 0px 10px 0px;
+}
+
+b, strong {
+    font-weight: 500;
+    /*reduce bold to semi bold Open Sans*/;
+}
+
+.columnRight p {
+    font-size: 1.3em;
+}
+
+table {
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+td.alignRight {
+    text-align: right;
+}
+
+td.verticalAlignTop {
+    vertical-align: top;
+}
+
+.noBorderBottom {
+    border-bottom: 0 !important;
+}
+
+.align-right /*alignRight has right padding in purchase.css*/ {
+    text-align: right;
+}
+
+.red {
+    color: red;
+}
+
+.float-right {
+    float: right;
+}
+
+.note {
+    font-size: 11px;
+}
+
+    .note h6 {
+        font-size: 1em;
+        margin: 5px 0;
+        position: relative;
+        cursor: pointer;
+    }
+
+        .note h6 sup {
+            font-size: smaller;
+        }
+
+        .note h6 span {
+            color: #555;
+            float: right;
+            height: 14px;
+            width: 10px;
+            font-size: 16px;
+        }
+
+        .note h6 .none {
+            display: none;
+        }
+
+#feeMsgContainer #feeMsg {
+    margin-top: 15px;
+}
+
+#feeMsgContainer.close #feeMsg, #feeMsgContainer.close #feeUp {
+    display: none;
+}
+
+#feeMsgContainer.close #feeDown {
+    display: block;
+}
+
+#feeMsg a {
+    color: #00ACED;
+}
+
+    #feeMsg a:hover {
+        color: #00C0ED;
+    }
+
+/* $4 - Global Lists & Clearing
+============================================================================== */
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+    ul.disc {
+        margin: 15px 20px;
+        list-style-type: disc;
+    }
+
+ol {
+}
+
+li.noBorder {
+    border: none !important;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    min-height: 0px;
+}
+
+.clearfix {
+    display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+/* End hide from IE-mac */
+.cl {
+    clear: both;
+    height: 1px;
+    display: block;
+}
+
+.center {
+    text-align: center;
+}
+/* $5 - Page Structures
+============================================================================== */
+
+/* Contains dark gradient from top (#022346) to bottom (#0C4C93) */
+#darkGradientBG {
+    background: transparent;
+    min-width: 1007px;
+    position: relative;
+    overflow: hidden; /*remove footer gap;*/
+}
+
+#wrapBodyHome {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    min-width: 1000px;
+    width: 100%;
+}
+/* VERY IMPORTANT FOR HOME PAGE TAKEOVERS - DO NOT CHANGE */
+#wrapBody.wrapBodyNew {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+/* Content shell */
+#contentShell {
+    width: 1007px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 0 0 0;
+    min-height: 810px;
+    position: relative !important;
+    height: auto !important;
+    height: 810px;
+    z-index: 2;
+}
+
+    #contentShell.contentShellNew {
+        width: 1007px;
+        /*border: 1px solid #EBEBEB;*/
+        border-top: 0;
+        border-bottom: 0;
+        padding: 0;
+        background: #FFF !important;
+        /*-moz-box-shadow: 0px 0px 3px 3px rgb(204,204,204);
+  -webkit-box-shadow: 0px 0px 3px 3px #CCCCCC;
+  box-shadow: -6px 0px 3px -3px #ccc, 6px 0px 3px -3px #CCC;*/
+    }
+
+#contentShellInner {
+    margin: 0 10px 15px 10px;
+    min-height: 900px;
+    background: #fff;
+}
+
+div.headingWrapDivide {
+    margin: 5px 0;
+    height: 1px;
+    background: #F3F3F3;
+}
+
+.cancelledShow .headingWrapDivide {
+    background: #DBDBDB;
+}
+
+div.showHeadingWrapDivide {
+    background: url("https://premier.ticketek.co.nz/images/headingDivideLine.gif") bottom left no-repeat;
+    margin: 0;
+}
+
+#managePaymentMethodIframe {
+    width: 100%;
+    min-height: 600px;
+    border: 0;
+}
+
+.clManagePaymentMethodIframe {
+    width: 100%;
+    min-height: 600px;
+    border: 0;
+}
+
+#primaryContainer {
+    float: left;
+    width: 622px;
+    color: #555;
+    border: 1px solid #EBEBEB;
+    padding: 16px;
+    margin: 10px 0;
+    background: #fff;
+}
+
+#primaryContainerWide {
+    float: left;
+    background: #FFF;
+    color: #555;
+    border: 1px solid #EBEBEB;
+    padding: 16px;
+    width: 950px;
+}
+/* new look pages */
+.primaryContainer {
+    float: left;
+    position: relative;
+    width: 637px;
+    margin: 10px 0 15px 0;
+    border: 1px solid #EBEBEB;
+    border-top: 0;
+    background-color: #FFF;
+    color: #555;
+    font-size: 12px;
+    /*overflow: hidden;*/;
+}
+/*These styles are to cater for the border in primaryContainer which is supposed to be inside the 639px container size*/
+.primaryContainerInner {
+    margin-left: -1px;
+    width: 639px;
+    overflow: hidden;
+}
+
+#primaryContainerHome {
+    background-size: 100% 699px;
+    -moz-background-size: 100% 699px;
+    -webkit-background-size: 100% 699px;
+    -o-background-size: 100% 699px;
+    float: none;
+    border: none;
+    margin-bottom: 0;
+}
+
+#primaryContainerHome, #primaryContainerGenre {
+    margin-top: 0;
+    overflow: hidden;
+}
+
+    #primaryContainerHome, #primaryContainerGenre #moreEventsSection {
+        background-color: #FFF;
+        background-size: cover;
+    }
+
+        #primaryContainerHome #primaryContainerInner {
+            width: 624px;
+            padding-left: 15px;
+        }
+
+        #primaryContainerHome div.myEvents {
+            margin-top: 10px;
+        }
+
+#eventsPageContainer {
+    float: left;
+    width: 673px;
+    /* + border bring it to 675px */
+    background: #FFF;
+    /*border-right: 1px solid #EBEBEB;	*/
+    color: #555;
+}
+
+#eventsPageContainerInner {
+    padding: 10px;
+}
+
+#eventsPageContainer .sectionTitle {
+    margin-right: 10px;
+}
+
+#showSocial {
+    float: right;
+    margin: 5px 10px 0px 5px;
+    height: 30px;
+}
+
+.addthis {
+    margin-left: 30px;
+}
+
+    .addthis #google_btn > span {
+        height: 20px !important;
+        margin-top: 5px;
+        opacity: 1;
+        width: 20px !important;
+    }
+
+    .addthis .btn {
+        margin-right: 5px;
+    }
+
+    .addthis, .addthis .btn {
+        float: none;
+        display: inline-block;
+    }
+
+        .addthis #addthis_btn > span {
+            border: 2px solid rgb(252, 109, 76);
+            margin-left: 0;
+            display: inline-block;
+        }
+
+/*.addthis_button_facebook_like, .addthis_button_tweet, .addthis_button_google_plusone, .addthis_pill_style {
+    margin-top: 5px;
+    display: block;
+    float: left;
+}
+
+.addthis_button_tweet {
+    width: 90px;
+}
+
+.addthis_button_google_plusone {
+    width: 70px;
+}
+
+.addthis_button_facebook_like {
+    background: transparent url(/images/fb_like_zero.png) 51px 1px no-repeat;
+}*/
+
+.facebookLikeBox .addthis_button_tweet, .facebookLikeBox .addthis_button_google_plusone, .facebookLikeBox .addthis_pill_style {
+    width: auto;
+    margin: 0 0 5px 0;
+}
+/* right column */
+#secondaryContainer {
+    float: right;
+    width: 300px;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    color: #555;
+}
+
+.wrapBodyNew #secondaryContainer {
+    width: 300px;
+    background: #f3f3f3;
+    border: 1px solid #ebebeb;
+    padding: 10px 5px;
+    margin: 10px 0;
+}
+/* hide secondary div styling on waitlist*/
+#primaryContainer + #visaPlatRHS + #secondaryContainer {
+    background: #fff;
+    border: none;
+}
+/* hide secondary container on Transaction History*/
+#primaryContainerWide + #visaPlatRHS + #secondaryContainer {
+    background: #fff;
+    border: none;
+    padding: 0;
+}
+/* remove bg and spacing from ads inherited from secondaryContainer */
+.narrowRight {
+    background: none !important;
+    border: none !important;
+    padding: 0 0 0 10px !important;
+    margin: 0 !important;
+    padding-left: 10px !important;
+}
+
+body.default #secondaryContainer {
+    padding: 10px 0 10px 10px;
+}
+
+.wrapBodyNew #secondaryContainer.secondaryContainerWider {
+    width: 336px;
+    background: #fff;
+    border: none;
+}
+
+    .wrapBodyNew #secondaryContainer.secondaryContainerWider.padBorder {
+        padding: 10px 0 10px 6px;
+        margin: 0;
+        padding-top: 10px;
+        border: none;
+        border-top: 1px solid #EBEBEB;
+        background: none;
+    }
+
+#secondaryContainerInner {
+    width: 300px;
+    padding: 15px 18px;
+    background: #fff;
+}
+
+    #secondaryContainerInner .houseAd {
+        margin: 15px 0;
+    }
+
+    .column-10 {
+        float: left;
+        width: 10%;
+        box-sizing: border-box;
+        padding: 6px;
+    }
+     
+    .column-15 {
+        float: left;
+        width: 15%;
+        box-sizing: border-box;
+        padding: 6px;
+    }
+     
+    .column-20 {
+        float: left;
+        width: 20%;
+        box-sizing: border-box;
+        padding: 6px;
+    }
+     
+    .column-25 {
+        float: left;
+        width: 25%;
+        box-sizing: border-box;
+        padding: 6px;
+    }
+    
+.column-30 {
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+    padding: 6px;
+}
+
+.column-last {
+    float: right;
+}
+
+.columnLeft img {
+    border: 1px solid #EBEBEB;
+}
+
+.columnRight p span {
+    color: #555;
+}
+
+h1 span.lowlight {
+    text-transform: none;
+    font-weight: normal;
+}
+
+h1 span.highlight {
+    color: #555;
+    text-transform: none;
+}
+
+.userBarWide {
+    height: 41px;
+    width: 605px;
+    position: relative;
+    margin-bottom: 4px;
+    /*
+	height: 35px;
+	width: 620px;
+	position: relative;
+	margin-bottom: 4px;
+	background: white;
+	margin: -16px 0 0 -15px;
+	padding: 10px;
+	*/;
+}
+
+    .userBarWide .absLeft, .userBarWide .absRight {
+        position: absolute;
+        top: 6px;
+    }
+
+.absRight .yellowLink {
+    font-weight: 500;
+    color: #00ACED;
+}
+
+.userBarWide .absLeft {
+    left: 0px;
+}
+
+.userBarWide .absRight {
+    right: 0px;
+    padding-top: 2px;
+    font-size: 12px;
+    color: #555;
+}
+
+#myEventsSection .userBarWide .absRight {
+    padding-top: 10px;
+    font-size: 14px;
+    float: right;
+}
+
+.sectionTitle {
+    position: relative;
+    background-color: #ebebeb;
+    height: 40px;
+    margin: 10px 0;
+    padding: 0;
+    color: #555;
+    clear: both; 
+    /*overflow:hidden;*/ /*white-space:no-wrap;*/
+}
+
+h1.sectionHeading, h2.sectionHeading, h3.sectionHeading, h4.sectionHeading, .detailModuleCopy h4.sectionHeading {
+    float: left;
+    font-size: 20px;
+    margin: 0 18px;
+    padding: 0;
+    vertical-align: middle;
+    color: #555;
+    font-weight: bold;
+    text-transform: none;
+}
+
+.sectionTitle h1.sectionHeading {
+    line-height: 35px;
+}
+
+h4.sectionHeading, .detailModuleCopy h4.sectionHeading {
+    font-weight: bold;
+}
+
+h4.sectionHeading{
+    text-overflow: ellipsis;
+    width: 98%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.offerSection h4.sectionHeading{
+    width: 85%;
+}
+
+.sectionTitle h1.sectionHeading, .sectionTitle h2.sectionHeading, .sectionTitle h3.sectionHeading, .sectionTitle h4.sectionHeading {
+    margin: 6px 12px 0;
+}
+
+.sectionHeadingText {
+    margin-top: 4px !important;
+}
+
+.cancelText {
+    vertical-align: middle;
+    display: block;
+    height: 100%;
+    /*width: 230px;*/
+    border-left: 2px solid #ebebeb;
+    float: right;
+}
+
+a.cancelTicketsLink {
+    display: block;
+    margin: 2px;
+    padding: 12px 18px 0 18px;
+    vertical-align: middle;
+    font-size: 11px;
+    color: #fff;
+    line-height: 100%;
+    cursor: pointer;
+}
+
+a.cancelTicketsLink:hover {
+    color: #999;
+}
+
+.sectionTitleRightText {
+    position: absolute;
+    vertical-align: middle;
+    display: block;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: right;
+    line-height: 40px;
+    padding-right: 10px;
+}
+
+    .sectionTitleRightText a {
+        color: #555;
+    }
+
+
+.sectionHeadingNote {
+    display: block;
+    width: 200px;
+    height: 100%;
+    margin: 2px;
+    padding: 0 18px;
+    border-left: 2px solid #ebebeb;
+    vertical-align: middle;
+    font-size: 11px;
+    line-height: 15px;
+    float: right;
+    color: #555;
+}
+
+.sectionFooterNote {
+    width: 200px;
+    margin: 2px;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-right: 21px;
+    padding-bottom: 0px;
+    padding-left: 0px !important;
+    border-top: 1px solid #EBEBEB;
+    vertical-align: middle;
+    font-size: 11px;
+    line-height: 15px;
+    float: right;
+    color: #555;
+}
+/* Remove Border on ad - override inline style */
+#islandBannerSpace1 {
+    border: 0 !important;
+}
+/* $6 - Masthead & Navigation
+============================================================================== */
+
+#mastHead {
+    width: auto;
+    padding-top: 10px;
+    z-index: 99999;
+    background-color: #fff;
+}
+
+    #mastHead #mainLogoAndLangDiv {
+        float: left;
+        width: 172px;
+    }
+
+        #mastHead #mainLogoAndLangDiv #mainLogo {
+            padding: 10px 0px 25px 0px;
+            float: left;
+            width: 172px;
+            height: 70px;
+        }
+
+#mainLogoAndLangDiv #languageDiv {
+    padding-top: 5px;
+    padding-left: 67px;
+    float: left;
+}
+
+#mastHead #bannerSpace {
+    float: right;
+    width: 728px;
+    height: 90px;
+    border: 1px solid #ebebeb;
+}
+
+#mastHead #bannerSpaceSmall {
+    float: right;
+    width: 468px;
+    height: 60px;
+    margin-top: 22px;
+    /* negative margin is used to align banner with RHS side, this is for Purchase pages only */
+    padding: 0;
+    margin-right: -10px;
+    position: relative;
+}
+/* SignIn | Register */
+#mastHead_signin_search {
+    height: 44px;
+    clear: both;
+    z-index: 99999;
+}
+
+#mastHeadSignin {
+    font-size: 1.9em;
+    text-transform: capitalize;
+    float: left;
+    width: 395px;
+    margin: 7px 0 0 8px;
+    padding: 5px;
+    font-weight: 500;
+}
+
+    #mastHeadSignin .loginWrapper {
+        font-size: .7em;
+    }
+
+    #mastHeadSignin a {
+        text-transform: uppercase;
+        color: #555;
+    }
+
+    #mastHeadSignin.mastHeadSigninFixed, #mastHeadSignin.mastHeadSigninFixed a {
+        color: #FFF;
+    }
+
+.noBorder {
+    border: none !important;
+}
+
+#mastHeadSignin a:hover {
+}
+/* SEARCH */
+#mastHead #searchModule {
+    float: right;
+    width: 550px;
+    position: relative;
+    height: 41px;
+    /*update for new masthead*/
+    /*changes*/
+    margin: 4px 0 5px 0;
+    /*width:450px !important;*/;
+}
+
+    #mastHead #searchModule #searchWhat input {
+        /*width:90px; */
+        /*update for new masthead*/
+        width: 500px /*!important*/;
+    }
+/* Masthead - Fixed bar on scroll ------------ */
+
+#mastHead.mastHeadFixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #007ACC;
+    width: 100%;
+    border-top: 5px solid #006DB7;
+    border-bottom: 2px solid #FFF;
+}
+
+.fixfixed {
+    position: relative;
+    /*
+	position:fixed;
+	top:0 !important;
+	*/;
+}
+
+.mastHead_signin_search_Fixed {
+    width: 987px;
+    margin: 0 auto;
+}
+
+.fixedLogo {
+    /*Add loogo*/
+    display: none;
+}
+
+.fixedLogoActive {
+    width: 90px;
+    float: left;
+    display: block;
+}
+
+#mastHeadSignin.mastHeadSigninFixed {
+    /*reduce size of signin*/
+    font-size: 1.2em;
+    margin: 5px 0 15px 25px;
+    width: 250px;
+}
+
+    #mastHeadSignin.mastHeadSigninFixed .loginWrapper {
+        font-size: 1.0em;
+    }
+
+.searchModuleFixed {
+    /*reduce size of search bar*/
+    margin: 4px 0 0 0;
+    width: 550px;
+}
+
+.searchWhatFixed {
+    height: 16px;
+}
+
+.btnGoFixed {
+    height: 24px;
+}
+
+.btnGoImageFixed {
+    height: 14px;
+    width: 14px;
+    background-position: 4px 4px;
+}
+
+.inputFixed {
+    width: 506px;
+}
+/* ---------------------- */
+
+
+
+#sessionTimeDivAndLangDiv {
+    clear: both;
+    /*padding:10px 0px 5px 20px;*/
+    /* fix for ie7, to ensure no mainNavigation elements are visible through the region popup */
+    z-index: 3000;
+    position: relative;
+}
+
+#regionSelectorAndTimeDiv {
+    padding: 3px 0px 3px 10px;
+    float: left;
+}
+/* ---- Region Selector ------- */
+.regionSelectorDiv {
+    display: inline;
+    height: 30px;
+    line-height: 18px;
+    position: relative;
+    top: -5px;
+    float: left;
+    /*New Layout
+	padding:10px 0px 3px 10px;*/;
+}
+
+.regionSelector {
+    margin-top: 3px;
+    position: relative;
+}
+
+    .regionSelector .dropdownOuter {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        top: 25px;
+        left: -40px;
+        padding-top: 15px;
+        width: 620px;
+        background: transparent url("https://premier.ticketek.co.nz/images/region_selector_fatuparrow.png") 235px 4px no-repeat;
+    }
+
+/* hack for chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .regionSelector .dropdownOuter {
+        top: 23px;
+    }
+}
+
+/* iPad [portrait + landscape] */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .regionSelector .dropdownOuter {
+        top: 20px;
+        left: -20px;
+        overflow: hidden;
+        background-position: 220px 4px;
+    }
+}
+
+.regionSelector.popupUp .dropdownOuter {
+    display: block;
+}
+
+.regionSelector .dropdownInner {
+    font-size: 120%;
+    background-color: #fff;
+}
+
+    .regionSelector .dropdownInner .left a {
+        color: #00ACED;
+    }
+
+        .regionSelector .dropdownInner .left a:hover {
+        }
+
+    .regionSelector .dropdownInner .right a {
+        color: #00ACED;
+    }
+
+        .regionSelector .dropdownInner .right a:hover {
+        }
+
+    .regionSelector .dropdownInner .left {
+        float: left;
+        background-color: #fff;
+        width: 190px;
+        padding: 15px 10px;
+        line-height: 15px;
+    }
+
+    .regionSelector .dropdownInner .right {
+        float: left;
+        background: #fff;
+        margin: 0 0 15px 0;
+        width: 364px;
+        /* this is just to set min-height, and the other stuff is for IE7 */
+        height: auto !important;
+        height: 145px;
+        min-height: 155px;
+    }
+
+    .regionSelector .dropdownInner .clear {
+        clear: both;
+    }
+
+.regionSelector .rightHeader {
+    margin-bottom: 10px;
+    background: #f3f3f3;
+    padding: 10px;
+    width: 100%;
+}
+
+.regions {
+    margin-left: 10px;
+    padding-top: 5px;
+}
+
+.regionSelector .rightHeader a {
+    font-size: 12px;
+}
+
+.regionSelector .rightHeader .regionListCaption {
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.regionSelector .regionSelectorSpan {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #555;
+    line-height: 30px;
+}
+
+.regionSelector .regionSelectorSpan {
+    font-size: 17px;
+}
+
+.regionSelector .regionColumn {
+    float: left;
+    padding-right: 20px;
+}
+
+.regionSelector .regionLink {
+    cursor: pointer;
+    color: #555;
+    font-size: 120%;
+    line-height: 20px;
+}
+
+    .regionSelector .regionLink:hover {
+    }
+
+    .regionSelector .regionLink.selected {
+        font-weight: bolder;
+        cursor: default;
+        color: #555;
+        padding-left: 12px;
+        margin-left: -12px;
+        background: transparent url("https://premier.ticketek.co.nz/images/2013/region_selector_bullet.png") left center no-repeat;
+    }
+
+/*fix header width on ipad*/
+@media all and (device-width: 768px) and (device-height: 1024px) {
+    #mastHeadNew {
+        width: 1007px !important;
+    }
+}
+/* ---------------------------------------- */
+/* NEW MastHead*/
+#mastHeadNew {
+    width: 100%;
+    min-width: 1007px;
+    position: relative;
+}
+/* GREY */
+#headerGrey {
+    height: 44px;
+    background: #006DB7;
+    position: relative;
+    width: auto;
+}
+
+#headerGreyCentre {
+    width: 1007px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+}
+
+    #headerGreyCentre #sessionTimeDivAndLangDiv {
+        clear: both;
+        /*padding:10px 0px 5px 20px;*/
+        /* fix for ie7, to ensure no mainNavigation elements are visible through the region popup */
+        z-index: 3000;
+        position: relative;
+    }
+
+    #headerGreyCentre #regionSelectorAndTimeDiv {
+        padding: 3px 0px 3px 10px;
+        float: left;
+    }
+/* ----------------------------------------- */
+/* Region Selector */
+/*#headerGreyCentre*/ .regionSelectorDiv {
+    display: inline;
+    height: 30px;
+    line-height: 18px;
+    position: relative;
+    top: -5px;
+    float: left;
+    /*new layout*/
+    padding: 10px 0px 3px 10px;
+}
+
+.regionSelector {
+    margin-top: 3px;
+    position: relative;
+}
+
+    .regionSelector .dropdownOuter {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        top: 25px;
+        left: 0;
+        padding-top: 13px;
+        width: 400px;
+        background: transparent url("https://premier.ticketek.co.nz/images/region_selector_fatuparrow.png") 120px 4px no-repeat;
+        /*Drop Shadow*/
+        -webkit-box-shadow: 0px 8px 16px 1px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 8px 16px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 8px 16px 1px rgba(0, 0, 0, 0.2);
+    }
+
+/* hack for chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .regionSelector .dropdownOuter {
+        top: 23px;
+    }
+}
+/*
+No longer needed
+iPad [portrait + landscape]
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+.regionSelector .dropdownOuter {
+	top:20px;
+	left:-20px;
+	overflow:hidden;
+	background-position:220px 4px;
+}
+}*/
+.regionSelector.popupUp .dropdownOuter {
+    display: block;
+}
+
+.regionSelector .dropdownInner {
+    /*font-size: 120%;*/
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    width: 400px;
+}
+
+    .regionSelector .dropdownInner .left a {
+        color: #00ACED;
+    }
+
+    .regionSelector .dropdownInner .right a {
+        color: #00ACED;
+    }
+
+    .regionSelector .dropdownInner .left {
+        float: right;
+        /*background-color: #fff;*/
+        width: 380px;
+        padding: 0 10px;
+        line-height: 15px;
+        margin-top: 178px;
+        /**/
+        background: #f3f3f3;
+    }
+
+        .regionSelector .dropdownInner .left p {
+            color: #555;
+            margin: 10px 0;
+        }
+
+    .regionSelector .dropdownInner .right {
+        float: left;
+        background: #fff;
+        /*padding:10px 10px 0 10px;*/
+        width: 380px;
+        /* this is just to set min-height, and the other stuff is for IE7 */
+        height: auto !important;
+        height: 155px;
+        min-height: 155px;
+        position: absolute;
+        clear: both;
+    }
+
+    .regionSelector .dropdownInner .clear {
+        clear: both;
+    }
+
+.regionSelector .rightHeader {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+    .regionSelector .rightHeader a {
+        font-size: 11px;
+    }
+
+    .regionSelector .rightHeader .regionListCaption {
+        font-size: 14px;
+        font-weight: 700;
+        /*margin-right:5px;*/;
+    }
+/* yelow selection text*/
+#headerGreyCentre .regionSelector .regionSelectorSpan, #headerGreyCentre .regionSelector .currentRegion {
+    text-transform: none;
+    font-weight: 500;
+    color: #FEE949;
+    line-height: 30px;
+}
+
+#headerGreyCentre .regionSelector .regionSelectorSpan {
+    font-size: 1.3em;
+    /*font-size:12px;*/;
+}
+
+    #headerGreyCentre .regionSelector .regionSelectorSpan .currentRegion {
+        cursor: pointer;
+    }
+
+        #headerGreyCentre .regionSelector .regionSelectorSpan .currentRegion:hover {
+            cursor: pointer;
+        }
+/*Dropdown - RIGHT*/
+.regionSelector .regionColumn {
+    float: left;
+    padding-right: 0px;
+    margin: 0 0 0 20px;
+}
+
+.regionSelector .regionLink {
+    cursor: pointer;
+    color: #555;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+    .regionSelector .regionLink.selected {
+        font-weight: 500;
+        cursor: default;
+        color: #555;
+        padding-left: 12px;
+        margin-left: -12px;
+        background: transparent url("https://premier.ticketek.co.nz/images/2013/region_selector_bullet.png") left center no-repeat;
+        /*change image*/;
+    }
+/* --------------------------- */
+/* NAVIGATION */
+#headerGreyCentre #sessionTimeDivAndLangDiv #navBar {
+    width: auto;
+    /*380px*/
+    height: 44px;
+    float: right;
+    margin-top: 0 !important;
+}
+
+#headerGreyCentre #mainNavigation {
+    padding: 15px 0px 0px 0;
+    height: 25px;
+    float: left;
+    width: auto;
+    margin: 0 5px 0 0;
+}
+
+    #headerGreyCentre #mainNavigation li {
+        float: left;
+        color: #fff;
+        /*font-size: 1.3em;*/
+        height: 8px;
+        background: none;
+        border-right: solid 1px #fff;
+        padding: 0 0 6px 0;
+        line-height: 13px;
+    }
+
+        #headerGreyCentre #mainNavigation li a {
+            color: #fff;
+            text-transform: none;
+            font-weight: normal;
+            height: 18px;
+            width: auto;
+            display: block;
+            padding: 0px 9px 0px 9px;
+            letter-spacing: 0;
+            font-size: 12px;
+        }
+
+            #headerGreyCentre #mainNavigation li a:hover, #mainNavigation li a.activeMainNav {
+                background: none;
+                color: #f3f3f3;
+            }
+/* Menu social */
+#navBar #socialHeader {
+    margin: 6px 0 0 0;
+    width: auto;
+    height: 44px;
+    overflow: hidden;
+    float: right;
+}
+
+    #navBar #socialHeader li {
+        display: inline-block;
+        float: left;
+        height: 22px;
+        width: 22px;
+        padding: 5px 4px 0px 2px !important;
+    }
+
+        #navBar #socialHeader li a {
+            font-size: 0px;
+            line-height: 0px;
+            height: 22px;
+            width: 22px;
+            display: block;
+            cursor: pointer;
+        }
+
+        #navBar #socialHeader li.facebook2 a {
+            background-image: url("https://premier.ticketek.co.nz/images/social/homeSidebar/facebook_off_Square.png");
+            background-size: contain;
+        }
+
+            #navBar #socialHeader li.facebook2 a:hover {
+                background-image: url("https://premier.ticketek.co.nz/images/social/homeSidebar/facebook_on_Sqaure.png");
+                background-size: contain;
+            }
+
+        #navBar #socialHeader li.facebook a {
+            background: url("https://premier.ticketek.co.nz/images/social/homeSidebar/facebook_off.png");
+            background-size: contain;
+        }
+
+            #navBar #socialHeader li.facebook a:hover {
+                background: url("https://premier.ticketek.co.nz/images/social/homeSidebar/facebook_on.png");
+                background-size: contain;
+            }
+
+        #navBar #socialHeader li.twitter a {
+            background-image: url("https://premier.ticketek.co.nz/images/social/homeSidebar/twitter_off.png");
+            background-size: contain;
+        }
+
+            #navBar #socialHeader li.twitter a:hover {
+                background-image: url("https://premier.ticketek.co.nz/images/social/homeSidebar/twitter_on.png");
+                background-size: contain;
+            }
+
+        #navBar #socialHeader li.youtube a {
+            background-image: url("https://premier.ticketek.co.nz/images/social/homeSidebar/youTube_off.png");
+            background-size: contain;
+        }
+
+            #navBar #socialHeader li.youtube a:hover {
+                background-image: url("https://premier.ticketek.co.nz/images/social/homeSidebar/youTube_on.png");
+                background-size: contain;
+            }
+
+        #navBar #socialHeader li.instagram a {
+            background-image: url("https://premier.ticketek.co.nz/images/social/homeSidebar/instagram_off.png");
+            background-size: contain;
+        }
+
+            #navBar #socialHeader li.instagram a:hover {
+                background-image: url("https://premier.ticketek.co.nz/images/social/homeSidebar/instagram_on.png");
+                background-size: contain;
+            }
+/* ------------------------------- */
+/* BLUE */
+#headerBlue {
+    height: 114px;
+    background: #007ACC;
+    width: auto;
+}
+
+#headerBlueCentre {
+    width: 1007px;
+    margin: 0 auto;
+}
+    /* LOGO */
+    #headerBlueCentre #mainLogoAndLangDiv {
+        float: left;
+        width: 207px;
+    }
+
+        #headerBlueCentre #mainLogoAndLangDiv #mainLogo {
+            padding: 20px 0 0 10px;
+            float: left;
+            width: 207px;
+            height: 86px;
+        }
+
+        #headerBlueCentre #mainLogoAndLangDiv #languageDiv {
+            padding-top: 5px;
+            padding-left: 67px;
+            float: left;
+            display: none;
+        }
+    /* ------------------------ */
+    /* Banner Ad */
+    #headerBlueCentre #bannerSpace {
+        float: right;
+        width: 728px;
+        height: 90px;
+        /*border: 1px solid #ebebeb;*/
+        margin: 10px 10px 0 0;
+    }
+
+    #headerBlueCentre #bannerSpaceSmall {
+        float: right;
+        width: 468px;
+        height: 60px;
+        margin-top: 22px;
+        /*negative margin is used to align banner with RHS side, this is for Purchase pages only*/
+        padding: 0;
+        margin-right: -10px;
+        position: relative;
+    }
+/*-------------------*/
+
+#languageDiv {
+    float: right;
+    padding-top: 2px;
+}
+
+    #languageDiv a {
+        padding-left: 4px;
+    }
+
+#sessionTimeDiv {
+    display: inline;
+    color: #555;
+    font-size: 1.1em;
+    height: 18px;
+    margin-left: 10px;
+    position: relative;
+    top: -5px;
+}
+/*Hack targeting all IE versions */
+#sessionTimeDiv {
+    *padding-bottom: 4px;
+}
+
+    #sessionTimeDiv img {
+        position: relative;
+        top: 7px;
+    }
+
+    #sessionTimeDiv span {
+        color: #555;
+    }
+
+#navBar {
+    width: 972px;
+    height: 41px;
+}
+
+.wrapBodyNew #navBar {
+    background: none;
+    float: right;
+    height: inherit;
+    width: inherit;
+    z-index: 9999;
+}
+
+#mainNavigation {
+    padding: 0px 0px 0px 30px;
+    height: 41px;
+    float: left;
+    width: 482px;
+}
+
+.wrapBodyNew #mainNavigation {
+    height: inherit;
+    width: inherit;
+    padding-right: 30px;
+}
+
+    .wrapBodyNew #mainNavigation a:hover {
+    }
+
+#mainNavigation li {
+    float: left;
+    color: #555;
+    font-size: 11px;
+    height: 41px;
+    background: url("https://premier.ticketek.co.nz/images/navItemDivider.png") top left no-repeat;
+}
+
+    #mainNavigation li .nobasket,
+    #mainNavigation li .myBasket {
+        width: 40px;
+        position: relative;
+    }
+
+        #mainNavigation li .nobasket img,
+        #mainNavigation li .myBasket img {
+            position: absolute;
+            top: -3px;
+            left: 8px;
+        }
+
+.wrapBodyNew #mainNavigation li {
+    color: #fff;
+    height: inherit;
+    line-height: 12px;
+    background: none;
+    margin-top: 8px;
+    border-left: 1px solid #EBEBEB;
+}
+
+    .wrapBodyNew #mainNavigation li:first-child {
+        border-left: none;
+    }
+/* this is the changed by ALpha Salmon*/
+* html #mainNavigation li {
+    background: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/navItemDivider.png', sizingMethod='crop');
+}
+
+    * html #mainNavigation li a {
+        display: inline-block;
+    }
+
+    #mainNavigation li a {
+        color: #555;
+        text-transform: uppercase;
+        font-weight: bold;
+        height: 28px;
+        width: auto;
+        display: block;
+        padding: 14px 9px 0px 9px;
+        letter-spacing: 0;
+    }
+
+.wrapBodyNew #mainNavigation li a {
+    color: #555;
+    height: inherit;
+    text-transform: none;
+    padding-top: 0;
+}
+
+#mainNavigation li a:hover, #mainNavigation li a.activeMainNav {
+    background: #ebebeb;
+}
+
+.wrapBodyNew #mainNavigation li a:hover, .wrapBodyNew #mainNavigation li a.activeMainNav {
+    background: none;
+}
+
+#searchModule {
+    float: right;
+    /*width:478px;*/
+    /*width:450px !important;*/
+    position: relative;
+    height: 41px;
+    /*update for new masthead
+	margin:8px 0 20px 0;*/;
+}
+    /* Hide labels - these are added for accesibility but are not shown as standard */
+    #searchModule label {
+        display: none;
+    }
+
+    #searchModule #searchWhat, #searchModule #searchGenre, #searchModule #searchWhere, #searchModule #searchDate {
+        position: absolute;
+        top: 11px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #searchModule #searchWhat {
+        left: 45px;
+        width: auto;
+    }
+
+        #searchModule #searchWhat input {
+            width: 90px;
+            /*width:400px !important;*/;
+        }
+
+    #searchModule #searchGenre {
+        left: 145px;
+        width: auto;
+    }
+
+        #searchModule #searchGenre select {
+            width: 84px;
+        }
+
+    #searchModule #searchWhere {
+        left: 234px;
+        width: auto;
+    }
+
+        #searchModule #searchWhere select {
+            width: 120px;
+        }
+
+    #searchModule #searchDate {
+        left: 359px;
+        width: 95px;
+    }
+
+        #searchModule #searchDate input {
+            width: 65px;
+        }
+
+        #searchModule #searchDate img {
+            position: absolute;
+            top: 1px;
+            right: 0;
+        }
+
+    #searchModule input, #searchModule select {
+        font-size: 11px;
+        color: #555;
+        margin: 0;
+        padding: 0;
+    }
+
+    #searchModule input {
+        border: none;
+    }
+
+@media all and (device-width: 768px) and (device-height: 1024px) {
+    .wrapBodyNew #searchModule #searchWhat input {
+        -webkit-appearance: caret;
+    }
+
+    .wrapBodyNew #btnGo a {
+    }
+}
+
+#searchModule input {
+    border-left: 1px solid #DBDBDB;
+    border-top: 1px solid #DBDBDB;
+}
+
+#searchModule input {
+    padding: 2px 0px 0px 2px;
+}
+
+#searchModule select {
+    padding: 0px 0px 0px 2px;
+}
+
+#btnGo {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+#searchModule h2 {
+    position: absolute;
+    top: 14px;
+    left: -10px;
+    color: #555;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapBodyNew #searchModule {
+    width: inherit;
+    height: inherit;
+}
+
+    .wrapBodyNew #searchModule h2 {
+        display: none;
+    }
+
+    .wrapBodyNew #searchModule #searchWhat, .wrapBodyNew #searchModule #btnGo {
+        float: left;
+        position: inherit;
+        top: inherit;
+        right: inherit;
+        left: inherit;
+        bottom: inherit;
+    }
+
+        .wrapBodyNew #searchModule #searchWhat input {
+            /*height: 16px;*/
+            width: 290px;
+            font-size: 14px;
+            color: #555;
+            margin: 0;
+            padding: 5px;
+            border: 2px solid #DBDBDB;
+            border-radius: 4px 0 0 4px !important;
+            border-right: none;
+            /*Changes*/
+            height: 22px;
+            border: 2px solid #dbdbdb;
+            border-right: none;
+            font-family: 'Open Sans', Arial, Helvetica, Sans-serif;
+        }
+
+            .wrapBodyNew #searchModule #searchWhat input.inputPrompt {
+                color: #AAA;
+            }
+
+.wrapBodyNew #btnGo {
+    height: 24px;
+    border: 2px solid #ebebeb;
+    border-radius: 0 2px 2px 0;
+    border-left: none;
+    background-color: #fff;
+    padding: 1px;
+    cursor: pointer;
+    /*Changes*/
+    height: 30px;
+    border: 2px solid #dbdbdb;
+    border-left: none;
+}
+
+    .wrapBodyNew #btnGo a {
+        display: block;
+        height: 14px;
+        width: 14px;
+        background-color: #428226;
+        background-image: url("https://premier.ticketek.co.nz/images/search.png");
+        background-position: 5px 5px;
+        background-repeat: no-repeat;
+        border-radius: 2px;
+        padding: 5px;
+        /*Changes*/
+        height: 20px;
+        width: 20px;
+        background-position: 7px 7px;
+    }
+
+    .wrapBodyNew #btnGo img {
+        display: none;
+    }
+
+.wrapBodyNew .checkModule a {
+    color: #555;
+}
+/* Genre tabs
+============================================================================== */
+#categoricalNav {
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0;
+    width: 987px;
+    height: 40px;
+    background-color: #ebebeb;
+    text-align: justify;
+}
+
+    #categoricalNav li {
+        position: relative;
+        /*text-align: center;*/
+        display: inline-block;
+        vertical-align: top;
+        /*max-width: 175px;*/
+        font-size: 15px;
+        font-weight: 400;
+        font-family: 'Open Sans', Arial, Helvetica, Sans-serif;
+        text-transform: uppercase;
+        background: transparent url("https://premier.ticketek.co.nz/images/2013/nav_border_white.png") top right no-repeat;
+    }
+
+    #categoricalNav .hasSubMenu {
+        line-height: 0;
+    }
+
+        #categoricalNav .hasSubMenu > a {
+            height: auto;
+        }
+
+    #categoricalNav .exhibition {
+        width: 264px;
+    }
+
+    #categoricalNav a {
+        display: block;
+        line-height: 40px;
+        height: auto;
+        width: auto;
+        overflow: hidden;
+        color: #555;
+        /*text-align: center;*/
+        font-size: 15px;
+        padding: 0 19px;
+    }
+
+    #categoricalNav .hasSubMenu .arrow-down {
+        /*width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 7px solid #DBDBDB;
+        line-height: 0;
+        font-size: 0;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        top: 39px;
+        left: 37%;
+        margin-left: 0px;*/
+        display: none;
+    }
+
+    #categoricalNav .arrow_box {
+        background: #FFF;
+        position: absolute;
+        left: -164px;
+        margin-left: 0;
+        width: 285px;
+        z-index: 1;
+        display: none;
+        padding: 12px 0;
+        border-right: 1px solid #EBEBEB;
+        border-bottom: 1px solid #EBEBEB;
+        border-left: 1px solid #EBEBEB;
+        -webkit-box-shadow: 0px 25px 50px 7px rgba(72,72,72,0.25);
+        -moz-box-shadow: 0px 25px 50px 7px rgba(72,72,72,0.25);
+        box-shadow: 0px 25px 50px 7px rgba(72,72,72,0.25);
+        z-index: 999999;
+    }
+
+#categoricalNav > li:nth-of-type(8) > a {
+    color: rgba(255, 0, 0, 1) !important;
+}
+
+.catNavLast .arrow_box {
+    left: -143px !important;
+    width: 225px !important;
+}
+
+/*#categoricalNav .arrow_box:after,
+#categoricalNav .arrow_box:before {
+    bottom: 100%;
+    left: 23%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #FFF;
+	border-width: 5px;
+	margin-left: -5px;
+}*/
+
+#categoricalNav a:hover,
+#categoricalNav .arrow_box a:hover {
+    color: #00ACED;
+}
+
+#categoricalNav .arrow_box a:hover {
+    background-color: #F3F3F3;
+}
+
+#categoricalNav .arrow_box a {
+    vertical-align: bottom;
+    line-height: 2.25em;
+    border: none;
+    color: #555;
+}
+
+#categoricalNav li.catNavLast {
+    background: none;
+}
+
+#categoricalNav .catNavActive {
+    padding: 0 1px 0 0;
+}
+
+    #categoricalNav .catNavActive a {
+        color: #00ACED;
+        border-bottom: solid 2px #FEE949;
+        height: 30px;
+    }
+
+        #categoricalNav .catNavActive a:hover {
+            background: transparent;
+        }
+
+#categoricalNav .hasSubMenu:hover .arrow-down {
+    display: none;
+}
+
+#categoricalNav .hasSubMenu:hover .arrow_box,
+#categoricalNav .hasSubMenu .arrow_box:hover {
+    display: inline-block;
+}
+
+#categoricalNav .hasSubMenu.catNavActive a {
+    border-bottom: 0;
+    height: auto;
+}
+
+#categoricalNav .hasSubMenu.catNavActive .arrow_box {
+    border-bottom: solid 2px #FEE949;
+}
+
+#categoricalNav .arrow_box li {
+    /*background: #FFF;*/
+    display: block;
+    max-width: 325px;
+    height: auto;
+    z-index: 1;
+    padding: 0;
+}
+
+#categoricalNav .arrow_box .catNavActive a {
+    color: #00ACED;
+}
+
+#categoricalNav .arrow_box .catNavActive {
+    border-bottom: 0;
+    height: auto;
+}
+
+/* $7 - The Footer
+============================================================================== */
+
+#wrapFooter {
+    text-align: right;
+    font-size: 1.1em;
+    background-color: #F3F3F3;
+    color: #555;
+    padding: 15px;
+    clear: both !important;
+    overflow: hidden;
+}
+
+    #wrapFooter a {
+        color: #555;
+        font-size: 11px;
+        text-transform: none;
+        line-height: 16px;
+        font-weight: 400;
+    }
+
+        #wrapFooter a:hover {
+            color: #ADADAD;
+        }
+
+    #wrapFooter h3 {
+        color: #555;
+        text-transform: none;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    #wrapFooter > div {
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+        width: 125px;
+        text-align: left;
+    }
+
+    #wrapFooter .footerAbout, #wrapFooter .footerInsurance {
+        width: 435px;
+        float: left;
+    }
+
+    #wrapFooter .footerCompany {
+        width: 160px;
+    }
+
+    #wrapFooter .footerSite {
+        width: 130px;
+    }
+
+    #wrapFooter .footerPartners {
+        min-height: 95px;
+        width: 179px;
+    }
+
+    #wrapFooter .footerBannerSpaceNew {
+        float: left;
+        width: 728px;
+        height: 90px;
+    }
+
+    #wrapFooter .footerVersion {
+        display: block;
+        padding: 0 10px;
+        text-align: center;
+        width: 100%;
+        clear: both;
+    }
+
+    #wrapFooter .secondaryNav {
+        padding: 0;
+        height: auto;
+        font-size: inherit;
+        text-align: left;
+    }
+
+        #wrapFooter .secondaryNav li {
+            padding: 0;
+            display: list-item;
+            border: 0;
+            text-align: left;
+        }
+
+#footerAdSegment {
+    background: #d6ecff url("https://premier.ticketek.co.nz/images/footerShadowTop.jpg") top left repeat-x;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+#footerContent {
+    width: 980px;
+    margin: 0 auto;
+}
+
+#footerLargeLogos {
+    float: right;
+    width: 240px;
+}
+
+#footerBannerSpace {
+    float: left;
+    width: 728px;
+    margin: 0px 10px 0px 0px;
+}
+
+#footerBannerSpaceNew {
+    margin: 0 auto;
+    clear: both;
+}
+
+#footerNav {
+    background-color: #F3F3F3;
+    padding: 10px 0px;
+}
+
+    #footerNav li {
+        padding: 0px 0px 0px 3px;
+        display: inline;
+    }
+
+        #footerNav li a {
+            color: #555;
+            padding: 0px 3px 0px 0px;
+        }
+
+            #footerNav li a:hover {
+            }
+
+#sitewalk {
+    margin: 0 auto;
+    width: 900px;
+}
+
+    #sitewalk td {
+        vertical-align: top;
+        text-align: left;
+        width: 100px;
+    }
+
+    #sitewalk li {
+        line-height: 2em;
+    }
+
+#footerLogos {
+    padding: 10px 0px 15px 0px;
+    background: url("https://premier.ticketek.co.nz/images/footerLogosDivide.gif") bottom center no-repeat;
+    margin-bottom: 10px;
+}
+
+    #footerLogos ul {
+        text-align: center;
+    }
+
+    #footerLogos li {
+        display: inline;
+        padding: 0px 8px;
+    }
+
+#footerSecurityCenter {
+    margin: 0 auto;
+    width: 315px;
+    height: 60px;
+}
+
+#footerSecurityCenterHttps {
+    margin: 0 auto;
+    width: 250px;
+    height: 60px;
+}
+
+#footerSecurityLeft {
+    float: left;
+    padding: 5px 0px 0px 20px;
+}
+
+#footerSecurityRight {
+    float: right;
+    padding: 5px 8px 0px 8px;
+}
+
+#footerSecurityIcons {
+    float: right;
+    margin: -25px 0 0 0;
+}
+
+.footerSecurity img,
+.footerSoftix img {
+    width: 75px !important;
+}
+/* $8 - Forms
+============================================================================== */
+
+form, fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+/*iOS Issue of rounded form elements*/
+input, select {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+/* IE9 to make the border look the way its suppose to when border-radius comes into effect */
+select {
+    border: solid 1px #DBDBDB;
+}
+
+button, input[type="reset"], input[type="button"], input[type="submit"] {
+    -webkit-appearance: button;
+    -webkit-box-sizing: border-box;
+    -webkit-user-select: none;
+    -webkit-binding: none;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+input[type="radio"] {
+    -webkit-border-radius: 30px;
+}
+
+input.borInput, textarea.borInput {
+    border: 1px solid #B7B7B7;
+    padding: 3px;
+    margin: 0;
+    font-family: 'Open Sans', Arial, Helvetica, Sans-serif;
+    color: #555;
+    font-size: 1em;
+}
+
+select.borInput {
+    color: #555;
+    font-size: 12px;
+    /*font-size:1.2em !important;*/
+    padding: 7px 7px;
+    width: 100% /*!important*/;
+}
+/*location - state drop down width*/
+#ctl00_ctl00_uiBodyMain_uiBodyMain_uiAddressDetails_tblAddress select.borInput {
+    width: auto;
+}
+
+.ajax__calendar_container {
+    z-index: 99;
+    background: white;
+}
+
+
+.blueButton, .blackButton, .yellowButton, .greyButton, .yellowGradientButton, .blueGradientButton, .redButton {
+    display: inline-block;
+    border: 0;
+    padding: 10px 45px;
+    background-color: #428226;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Open Sans', Arial, Helvetica, Sans-serif;
+}
+/**/
+.yellowButton {
+    width: 270px;
+}
+
+.heroText .yellowGradientButton {
+    padding: 6px 99px;
+    /**/
+    margin-right: 3px;
+}
+
+a.blueButton, a.blueButton:hover, a.blackButton, a.blackButton:hover, a.greyButton, a.greyButton:hover, a.blueGradientButton, a.blueGradientButton:hover,
+.detailModuleCopy a.blueButton, .detailModuleCopy a.redButton, .detailModuleCopy a.greyButton {
+    color: #fff;
+}
+
+    a.greyButton:hover, a.blueButton:hover, a.blackButton:hover {
+        text-decoration: none !important;
+    }
+
+.blueButton, .blueGradientButton {
+    background-color: #428226;
+    border: 0;
+    border-bottom: 1px solid #EBEBEB;
+    border-right: 1px solid #F3F3F3;
+    color: #fff;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.chooseTicketsOfferDiv .blueButton i {
+    display: inline-block;
+    margin-left: 7px;
+}
+
+.chooseTicketsOfferDiv .blueButton.disabled {
+    background-color: #aaa;
+}
+
+.blackButton {
+    background-color: #555;
+    border: 0;
+    border-bottom: 1px solid #EBEBEB;
+    border-right: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+    text-transform: uppercase;
+}
+
+.greyButton {
+    background-color: #555;
+    border: 0;
+    border-bottom: 1px solid #EBEBEB;
+    border-right: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+}
+
+.greyGradientButton, .greyGradientButton:hover, .greyGradientButton a, .greyGradientButton a:hover {
+    background-color: #555;
+    font-size: 12px;
+    padding: 8px 10px;
+    color: #FFFFFF !important;
+}
+
+.yellowButton, a.yellowButton,  .yellowGradientButton, a.yellowGradientButton {
+    background-color: #428226;
+    border: 0;
+    border-bottom: 1px solid #EBEBEB;
+    border-right: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+    color: #FFF !important;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+a.yellowButton:hover, a.yellowGradientButton:hover{
+    background-color: #548E3B; 
+    transition: all 0.3s ease 0s;
+}
+
+.yellowGradientButton {
+    background: #428226;
+    border: 0;
+    border-bottom: 1px solid #EBEBEB;
+    border-right: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+}
+
+    .yellowGradientButton:hover {
+        background: #548E3B;
+        border: 0;
+        border-bottom: 1px solid #EBEBEB;
+        border-right: 1px solid #F3F3F3;
+        border-right: 1px solid #F3F3F3;
+        transition: all 0.3s ease 0s;
+    }
+
+.blueGradientButton {
+    background-color: #428226;
+    border: 0;
+    border-bottom: 1px solid #EBEBEB;
+    border-right: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+}
+
+    .blueGradientButton:hover {
+        background-color: #548E3B;
+        border: 0;
+        border-bottom: 1px solid #EBEBEB;
+        border-right: 1px solid #F3F3F3;
+        border-right: 1px solid #F3F3F3;
+        transition: all 0.3s ease 0s;
+    }
+
+    .blueGradientButton,  .blueGradientButton a {
+        background-color: #428226;
+        font-size: 12px;
+        padding: 8px 10px;
+        color: #FFFFFF !important;
+    }
+
+    .blueGradientButton:hover, .blueGradientButton a:hover{
+        background-color: #548E3B;
+        transition: all 0.3s ease 0s;
+    }
+
+.redButton, a.redButton, a.redButton:hover {
+    background-color: #ED0036;
+    color: #fff;
+    text-decoration: none;
+}
+
+    .redButton:hover {
+        background-color: #ED4100;
+    }
+
+    .redButton.inverse {
+        background-color: #fff;
+        color: #ED0036;
+        border: 1px solid #ED0036;
+        outline: none;
+    }
+
+.blueButton.small {
+    padding: 4px 8px;
+}
+
+.toggleButton, a.toggleButton:hover, a.toggleButton:active {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #808284;
+    color: #808284;
+    font-size: 20px;
+    line-height: 1em;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+}
+
+a.toggleButton:hover, a.toggleButton:active {
+    background-color: #96989A;
+    color: #96989A;
+}
+
+a.toggleButton.off:after {
+    content: "\002b";
+    color: #fff;
+}
+
+a.toggleButton.on:after {
+    /*medium width dash ... fiddle the position or not vertically aligned*/
+    content: "\2013";
+    color: #fff;
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    width: 20px;
+}
+
+.resultBuyNow .blueGradientButton, .resultBuyNow a.blueGradientButton, .resultBuyNow a.blueGradientButton:hover {
+    background-color: #428226;
+    color: #FFF !important;
+}
+
+.resultBuyNow .blueGradientButton {
+    background: #428226;
+    border: 0;
+    border-bottom: 1px solid #EBEBEB;
+    border-right: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+}
+
+    .resultBuyNow .blueGradientButton:hover {
+        border: 0;
+        border-bottom: 1px solid #EBEBEB;
+        border-right: 1px solid #F3F3F3;
+        border-right: 1px solid #F3F3F3;
+        background: #548E3B !important;
+    }
+/* $9 - Error message container
+============================================================================== */
+
+.errorMessage {
+    margin: 10px 0px;
+    /*	border: solid 2px #f00;*/
+    /*	padding: 10px 5px;*/
+    padding: 10px 10px 1px 15px;
+    background-color: #fff;
+    color: red;
+    font-weight: 500;
+    /*semibold*/;
+}
+
+.errorMessageMembership {
+    margin: 10px 0px;
+    background-color: #fff;
+    color: red;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.errorMessageInLine {
+    color: #f00;
+    font-weight: 500;
+}
+/* $10 - Social Media Plugins
+===================================== */
+.facebookLikeBox {
+    padding: 0;
+    padding-top: 15px;
+    padding-left: 13px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    margin-bottom: 10px;
+}
+
+.venueFaceBook .facebookLikeBox {
+    border: 0;
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+
+.addthis_button_facebook_like iframe.fb_iframe_widget_lift {
+    z-index: 12 !important;
+}
+
+.facebookActivityBox {
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+    .facebookActivityBox .fb_iframe_widget span, .facebookActivityBox .fb_iframe_widget iframe {
+        height: 270px !important;
+        width: 300px !important;
+    }
+/* $11 - Special Access Booking
+===================================== */
+
+.specialAccessHeader {
+     /*	background: url(/images/disabledarrow.png) 0px 18px no-repeat;*/
+     background: url("https://premier.ticketek.co.nz/images/disabled.png") 35px 7px no-repeat;
+     cursor: pointer;
+     min-height: 20px;
+     min-width: 189px;
+     padding: 10px 40px;
+     font-weight: bold;
+     font-size: 14px;
+     color: #007ACC;
+     border: 1px solid #dbdbdb;
+     margin-left: -10px;
+     background-color: #fff;
+     border-radius: 4px;
+     margin: 10px 0px;
+     margin-left: -10px;
+}
+
+.specialAccessTitle:after{
+    content: "\F0D7";
+    font-family: FontAwesome;
+    float: right; 
+}
+
+/*.specialAccessHeaderToggle
+{
+	background: url(/images/disabledarrowdown.png) 0px 18px no-repeat;
+	cursor: pointer;
+}*/
+
+.specialAccessTitle {
+    float: left;
+    padding-left: 30px;
+    line-height: 19px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#ticketSelectionModule .specialAccessHeader {
+    /*	background: url(/images/disabledarrow.png) 0px 18px no-repeat;*/
+    background: url("https://premier.ticketek.co.nz/images/disabled.png") 10px 15px no-repeat;
+    cursor: pointer;
+    min-height: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #00ACED;
+    padding-bottom: 10px;
+}
+
+#ticketSelectionModule .specialAccessTitle {
+    float: left;
+    padding-top: 9px;
+    padding-left: 35px;
+    width: 100%;
+}
+
+.specialAccessDisabled {
+    float: right;
+    padding-top: 3px;
+}
+
+.specialAccessBody {
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px -10px 10px -10px;
+    color: #555;
+    font-size: 12px;
+}
+/* $12 - Floating bar
+To change font sizes please use the metric 1em = 10px, 1.2em = 12px
+============================================================================== */
+
+.floatingbar {
+    /*background: #DBDBDB;*/
+    background: rgb(219,219,219);
+    background: rgba(219,219,219,0.95);
+    /*border-top: 1px solid #DBDBDB;*/
+    color: #555;
+    height: 63px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 0;
+    text-align: left;
+}
+
+.floatingbarInner {
+    max-width: 1010px;
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+    text-align: right;
+}
+
+.floatingbar div.floatingbarInner div.accountdetails {
+    height: 58px;
+    float: left;
+    margin-left: 0px;
+    border-top: 5px solid transparent;
+    text-align: left;
+}
+
+.floatingbar div.floatingbarInner div.accountdetailsInner {
+    /*background: transparent url(/images/floatbaravatar.png) 10px 10px no-repeat;*/
+    /*padding: 10px 5px 2px 48px;*/
+    padding: 10px 5px 2px 8px;
+    cursor: default;
+}
+
+.floatingbar-popupavail.floatingbar-accountdetailsup .floatingbar .accountdetails, .floatingbar-popupavail .floatingbar .accountdetails:hover {
+}
+
+.floatingbar .accountdetails .myticketek {
+    font-size: 14px;
+    font-weight: 500;
+    /*color: #0075C9;*/
+    font-family: 'Open Sans', Arial, Helvetica, Sans-serif;
+}
+
+.floatingbar {
+    color: #555;
+}
+
+    .floatingbar a {
+        color: #555;
+    }
+
+        .floatingbar a:hover {
+            color: #434343;
+        }
+
+    .floatingbar .accountdetails .visitorname a, .floatingbar .accountdetails .visitorname {
+        font-size: 12px;
+        text-transform: capitalize;
+    }
+
+    .floatingbar .accountdetails .visitoremail {
+        display: block;
+    }
+
+    .floatingbar .myBasket {
+        display: inline-block;
+        *display: inline;
+        vertical-align: middle;
+    }
+
+        .floatingbar .myBasket img {
+            position: relative;
+            top: 8px;
+        }
+
+        .floatingbar .myBasket div.nobasket, .floatingbar .myBasket a {
+            text-align: center;
+            display: block;
+            position: relative;
+            top: 0px;
+            width: 50px;
+            height: 58px;
+            padding: 10px 0 5px 0;
+            margin: 0;
+            border-top: 5px solid transparent;
+        }
+
+            .floatingbar .myBasket a:hover {
+                background: #F3F3F3;
+            }
+
+    .floatingbar .timeremaining {
+        border-top: 5px solid transparent;
+        text-align: left;
+        display: inline-block;
+        *display: inline;
+    }
+
+        .floatingbar .timeremaining .blurb {
+            width: 115px;
+            height: 58px;
+            font-size: 11px;
+            font-weight: 500;
+            color: #555;
+            text-align: right;
+            padding: 13px 5px 0 0;
+            display: inline-block;
+            /* fix for ie7, to get it to do inline-block */
+            zoom: 1;
+            *display: inline;
+        }
+
+        .floatingbar .timeremaining .clock {
+            background: #FEE949;
+            width: 190px;
+            height: 58px;
+            font-size: 21px;
+            color: #555;
+            text-align: center;
+            padding: 15px 0px 2px 0;
+            display: inline-block;
+            position: relative;
+            top: -3px;
+            /* fix for ie7, to get it to do inline-block */
+            zoom: 1;
+            *display: inline;
+        }
+
+            .floatingbar .timeremaining .clock img {
+                position: relative;
+                top: 2px;
+            }
+
+    .floatingbar .rhsad {
+        display: inline-block;
+        *display: inline;
+        vertical-align: middle;
+    }
+
+    .floatingbar .rhsadInner {
+        height: 61px;
+        /*58px*/
+        border-top: 10px solid transparent;
+        padding-top: 12px;
+        padding-right: 8px;
+    }
+
+        .floatingbar .rhsadInner.floatingbar-rhspopupavail {
+            border-top: 5px solid transparent;
+        }
+
+        .floatingbar .rhsadInner a {
+            cursor: default;
+        }
+
+
+    .floatingbar .clear {
+        clear: both;
+    }
+
+    .floatingbar .close {
+        display: none;
+    }
+/* ----- */
+
+.floatingbar-popupavail.floatingbar-accountdetailsup .floatingbar-popupOuter, .floatingbar-popupavail.floatingbar-accountdetailsup .floatingbar-accountdetailspopup {
+    display: block;
+}
+
+.floatingbar-popupOuter {
+    display: none;
+    z-index: 900;
+    position: fixed;
+    bottom: 63px;
+    text-align: left;
+    width: 100%;
+}
+
+.floatingbar-popupInner {
+    width: 1020px;
+    margin: 0px auto;
+    left: 0px; /* required for ie7 */
+    overflow: hidden; /* required to keep arrow in place*/
+}
+
+.floatingbar-accountdetailspopup {
+    height: 300px;
+    display: none;
+    right: 0;
+    cursor: default;
+    float: left; /* required to autosize popup to content */
+    background: transparent;
+    margin: 46px 0 0 10px;
+}
+
+.floatingbar-accountdetailspopup-inner {
+    float: left;
+    display: inline-block;
+    width: 156px;
+    /*padding: 10px 15px 10px 15px;*/
+    padding: 0;
+    height: 285px;
+    margin: 0;
+    padding: 5px 5px 0 5px;
+    -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0 16px 1px rgba(0, 0, 0, 0.4);
+}
+
+.floatingbar-accountdetailspopup-ad {
+    float: left;
+    display: inline-block;
+    height: 273px;
+}
+
+.floatingbar-accountdetailspopup-inner, .floatingbar-accountdetailspopup-ad {
+    background-color: #fff;
+    /*border-bottom: 2px solid #EBEBEB;
+	border-top: 5px solid #F3F3F3;*/ /*border:1px solid #00ACED;*/
+    ;
+}
+
+.floatingbar-accountdetailspopup .boxbodyAccount {
+    background: #007ACC;
+    padding: 10px 15px;
+}
+
+    .floatingbar-accountdetailspopup .boxbodyAccount .visitorname {
+        display: block;
+        font-size: 13px;
+        color: #fff;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+        text-transform: capitalize;
+    }
+
+    .floatingbar-accountdetailspopup .boxbodyAccount .visitoremail {
+        display: block;
+        font-size: 11px;
+        color: #fff;
+        padding: 0;
+        /*margin-bottom: 10px;*/;
+    }
+
+.floatingbar-accountdetailspopup .boxbodyLinks .secondaryNav {
+    padding: 0 15px;
+    text-align: left;
+    height: auto;
+    width: 126px;
+    background-color: #FFF;
+}
+
+    .floatingbar-accountdetailspopup .boxbodyLinks .secondaryNav ul {
+        list-style-type: none;
+        /*padding-top: 10px;*/
+        padding: 10px 0;
+        border-top: 1px solid #F3F3F3;
+        /* height: 188px; */
+    }
+
+    .floatingbar-accountdetailspopup .boxbodyLinks .secondaryNav li {
+        display: block;
+        padding: 0;
+        border-width: 0;
+        margin-bottom: 6px;
+        text-align: left;
+    }
+
+    .floatingbar-accountdetailspopup .boxbodyLogoutLink a, .floatingbar-accountdetailspopup .boxbodyLinks .secondaryNav a, .floatingbar-accountdetailspopup .boxbodyLinks .secondaryNav a.activeSubItem {
+        font-size: 12px;
+        font-weight: normal;
+        color: #555;
+        text-transform: none;
+        font-weight: 500;
+        border-bottom: none;
+    }
+
+        .floatingbar-accountdetailspopup .boxbodyLogoutLink a:hover, .floatingbar-accountdetailspopup .boxbodyLinks .secondaryNav a:hover, .floatingbar-accountdetailspopup .boxbodyLinks .secondaryNav a.activeSubItem:hover {
+            /*color:#555;*/
+            color: #00ACED;
+        }
+
+.floatingbar-accountdetailspopup .boxbodyLogoutLink {
+    /*margin-bottom: 5px;*/
+    margin: 7px 0;
+}
+
+    .floatingbar-accountdetailspopup .boxbodyLogoutLink a {
+        padding: 0 15px;
+    }
+
+#floatingbar-container {
+    float: left;
+    margin-top: 63px;
+}
+
+#darkGradientBG #floatingbar-container {
+    margin: 0 !important;
+    /*fix for transparent footer on My Ticketek*/;
+}
+
+#floatingbar-container.mobile {
+    position: relative;
+    /**/
+    position: fixed;
+    /*
+	bottom: 0;
+	width: 100%;
+	z-index: 9999;
+	*/;
+}
+
+    #floatingbar-container.mobile .floatingbar {
+        position: static;
+    }
+
+    #floatingbar-container.mobile .floatingbar-popupOuter, #floatingbar-container.mobile .floatingbar-rhsPopupOuter {
+        position: absolute;
+        top: -275px;
+    }
+/* ----------------- */
+.floatingbar-rhsup .floatingbar-rhsPopupOuter, .floatingbar-rhsup .floatingbar-rhsPopupInner {
+    display: block;
+}
+
+.floatingbar-rhsPopupOuter {
+    display: none;
+    z-index: 900;
+    position: fixed;
+    /*bottom: 58px;*/
+    bottom: 63px;
+    text-align: left;
+    width: 100%;
+}
+
+.floatingbar-rhsPopup {
+    height: 214px;
+    width: 1000px;
+    margin: 0px auto;
+    left: 0px;
+    /* required for ie7 */ /*background: transparent url(/images/floatbarrhspopupfatdownarrow.png) no-repeat 83% bottom;*/
+    ;
+}
+
+.floatingbar-rhsPopupInner {
+    display: none;
+    height: 214px;
+    cursor: default;
+}
+
+.floatingbar-rhsPopup-events-inner-header {
+    margin: 0 10px 10px 0;
+}
+
+.floatingbar-rhsPopup-events {
+    display: inline-block;
+    padding: 0px;
+    margin: 0;
+    border: solid 1px #000;
+}
+
+.floatingbar-rhsPopup-events-inner {
+    margin: 25px 0px 0px 25px;
+    border-right: 1px solid #EBEBEB;
+    height: 152px;
+}
+
+    .floatingbar-rhsPopup-events-inner .event {
+        float: left;
+    }
+
+        .floatingbar-rhsPopup-events-inner .event .singleShowBox {
+            display: inline-block;
+            width: 189px;
+            margin-right: 15px;
+        }
+
+            .floatingbar-rhsPopup-events-inner .event .singleShowBox img {
+                width: 189px;
+            }
+
+            .floatingbar-rhsPopup-events-inner .event .singleShowBox .singleShowCaption a {
+                color: #555;
+                font-size: 100%;
+            }
+
+.floatingbar-rhsPopup-ad {
+    display: inline-block;
+    width: 285px;
+}
+
+.floatingbar-rhsPopup-ad {
+    float: right;
+    height: 203px;
+    background-color: #fff;
+    /*border:1px solid #dbdbdb;
+	border-bottom: 2px solid #dbdbdb;*/
+    -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0 16px 1px rgba(0, 0, 0, 0.4);
+}
+
+    .floatingbar-rhsPopup-ad a {
+        background: transparent url("https://premier.ticketek.co.nz/images/2013/floatbarrhspopupfatdownarrowWhite.png") no-repeat 50% bottom;
+        height: 149px;
+    }
+
+.floatingbar-rhsPopup-events {
+    float: right;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-bottom: 2px solid #dbdbdb;
+}
+/* ---------- */
+
+.floatingbar-rhsPopup-eventsBox .singleShowBox {
+    display: inline-block;
+    width: 101px;
+    margin-right: 15px;
+}
+
+    .floatingbar-rhsPopup-eventsBox .singleShowBox img {
+        width: 101px;
+    }
+
+    .floatingbar-rhsPopup-eventsBox .singleShowBox .singleShowCaption a {
+        color: #a0a0a0;
+        font-size: 100%;
+    }
+/* ----------------- */
+
+/* $12 - Login
+============================================================================== */
+
+#primaryContainer.login {
+    width: 953px;
+    border: none;
+}
+
+.login #myTick2Col {
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    vertical-align: top;
+    padding: 0px;
+    display: table-row;
+    width: 100%;
+}
+
+    .login #myTick2Col .formMod2Col {
+        margin: 0;
+        float: left;
+        vertical-align: top;
+        display: block;
+        border: none;
+    }
+
+        .login #myTick2Col .formMod2Col h3 {
+            font-size: 20px;
+            color: #00ACED;
+            margin: 0px;
+            padding: 0px;
+            text-transform: capitalize;
+            display: block;
+        }
+
+        .login #myTick2Col .formMod2Col .formModule {
+            border: none;
+            padding: 0;
+            color: #555;
+            min-height: 0px;
+            height: auto;
+        }
+
+            .login #myTick2Col .formMod2Col .formModule p {
+                font-size: 14px;
+            }
+
+            .login #myTick2Col .formMod2Col .formModule loginContentContainer.RememberMe label {
+                font-size: 12px;
+                color: #000;
+                margin: -18px 0px 0px 20px;
+                font-weight: bold;
+                padding: 0px 0px 3px 0px;
+            }
+
+#myTick2Col .formMod2Col.left h3, #myTick2Col .formMod2Col.right h3 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+#pipeLineContent #myTick2Col .formMod2Col.right .formModule {
+    min-height: 182px;
+}
+
+#pipeLineContent #myTick2Col .formMod2Col.left .formModule .loginContentContainer p strong {
+    font-size: 13px;
+}
+
+.login #myTick2Col .formMod2Col.left, .login #myTick2Col .formMod2Col.right {
+    text-align: left;
+    padding: 35px 30px;
+    position: relative;
+    min-height: 0px;
+    height: 250px;
+    width: 50%;
+    display: table-cell;
+    float: none;
+    border: 20px #f3f3f3 solid;
+    border-width: 21px 18px;
+}
+
+.loginContentContainer.RememberMe strong {
+    font-size: 13px;
+}
+
+.right .fromModule {
+    background: red;
+}
+
+.login div.loginContentContainer {
+    padding: 0;
+    color: #555;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+    .login div.loginContentContainer a {
+        font-size: 11px;
+        margin: 0px;
+        margin-right: 0;
+        margin-top: 4px;
+        padding: 0px;
+        float: right;
+    }
+
+    .login div.loginContentContainer.submit {
+        position: relative;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    /*.login div.loginContentContainer.submit input {
+            background-color: #428226;
+            padding: 7px 0 0 0;
+            color: #FFF;
+            font-size: 16px;
+            width: 150px;
+            max-height: 31px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+        }
+
+            .login div.loginContentContainer.submit input:hover {
+                text-decoration: none;
+                background-color: #81C63F;
+                color: #FFF;
+            }*/
+
+
+    .login div.loginContentContainer.RememberMe {
+        position: relative;
+        bottom: 0px;
+        left: 10px;
+    }
+
+        .login div.loginContentContainer.RememberMe strong {
+            font-size: 13px;
+        }
+
+
+.loginButton {
+    background-color: #428226;
+    padding: 7px 37px;
+    color: #FFF;
+    font-size: 18px;
+    width: 75px;
+    text-align: center;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+    .loginButton:hover {
+        text-decoration: none;
+        background-color: #548E3B;
+        transition: all 0.3s ease 0s;
+        color: #FFF;
+    }
+
+.login #myTick2Col .formMod2Col.left .formModule a {
+    position: relative;
+    bottom: 0px;
+}
+
+.login .loginContentContainer strong {
+    font-size: 16px;
+    color: #555;
+}
+
+.login input.borInput {
+    height: 20px;
+    width: 97%;
+    padding: 5px;
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+.login #myTick2Col .formMod2Col.right .errorMessage {
+    padding: 5px 0px 0px 0px;
+    border: 0px;
+    margin: 0px;
+    font-size: 12px;
+}
+/* $13 - Seatmap Footer
+============================================================================== */
+.seatMapFooter {
+    padding: 10px 5px;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+/* Back to Top - START
+============================================================================== */
+.wrapBodyNew .backToTopDiv {
+    display: none;
+    clear: both;
+    height: 40px;
+    background-color: #EBEBEB;
+    border-bottom: 1px solid #F3F3F3;
+}
+
+.backToTopDiv.showUp {
+    display: block;
+}
+
+.backToTopDiv .leftLogo {
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.backToTopDiv .rightAnchor {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+    .backToTopDiv .rightAnchor a {
+        font-weight: 500;
+        font-size: 12px;
+        color: #555;
+    }
+
+#uiNinemsnFooter, .hd_main .hd_top_wrapper, #bgHeader {
+    width: 100%;
+    min-width: 1010px;
+    display: none;
+}
+
+.fb_iframe_widget_lift {
+    z-index: 99 !important;
+}
+/* Show Page Popout Video
+============================================================================== */
+.eventImg .showvideos {
+    bottom: 50% !important;
+    height: 85px;
+    margin-bottom: -42px;
+    margin-right: -42px;
+    position: absolute;
+    right: 50% !important;
+    width: 85px;
+}
+
+.eventImg .showvideosImg {
+    border: none;
+    height: 85px !important;
+    width: 85px !important;
+    opacity: .8;
+}
+
+.eventImg {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    display: inline-block;
+}
+
+#video_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    z-index: 4000;
+    display: none;
+}
+
+#video_lightbox {
+    position: fixed;
+    display: none;
+    z-index: 9999;
+    width: 100%;
+    text-align: center;
+    top: 150px;
+}
+
+#video_lightboxBg {
+    background-color: #fff;
+    line-height: 0px;
+    width: 840px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9999;
+}
+
+    #video_lightboxBg #player {
+        padding: 5px;
+        z-index: 9999;
+        width: 840px;
+        height: 470px;
+        background-color: #fff;
+    }
+
+#video_light_close {
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    opacity: .8;
+    filter: alpha(opacity = 80);
+    background: #000;
+    border: 2px solid #FFF;
+    border-radius: 3px;
+    padding: 3px 5px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #FFF !important;
+    z-index: 10000;
+}
+
+    #video_light_close:hover {
+    }
+
+.video_player_loading {
+    background: #FFF url("https://premier.ticketek.co.nz/images/2013/logoBlue.png") center no-repeat !important;
+}
+/* $15 - Manage Credit Card
+============================================================================== */
+.btnDeleteCreditCard {
+    padding: 0 0 0 18px;
+}
+
+.btnManageCreditCard {
+    vertical-align: middle;
+}
+
+.manageCreditCardValidation {
+    color: Red;
+    font-weight: 500;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+table.billPayments tr:nth-child(2n+1) td {
+    background: #fff;
+}
+
+table.billPayments a {
+    color: #00ACED;
+}
+
+.managePartPayments {
+    position: relative;
+    min-height: 850px;
+}
+
+#managePartPaymentIframe {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border: 0;
+}
+
+.managePartPayments .blueButton.close {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    padding: 10px 8px;
+    z-index: 1;
+}
+
+.totalCostRenewalPage {
+    border: 1px solid #eee;
+    width: 25%;
+    float: right;
+    padding-top: 15px;
+    background-color: #eee;
+}
+
+    .totalCostRenewalPage input.btnManageCreditCard {
+        width: 100%;
+    }
+
+.totalCostRenewalPageForNotSuccessor {
+    border: 1px solid #eee;
+    width: 100%;
+    float: right;
+    background-color: #e8e8e8;
+}
+
+#renewalManageContainer input.btnManageCreditCard {
+    clear: both;
+    float: right;
+    margin: 10px;
+    width: 220px;
+}
+
+.renewalManageOptOutLabel {
+    padding-left: 10px;
+}
+
+.sectionTitleManageRenewal {
+    background-color: #ebebeb;
+    height: 25px;
+    margin: 10px 0;
+    padding-top: 12px;
+    color: rgba(0, 0, 0, 0.4);
+    clear: both; /*overflow:hidden;*/ /*white-space:no-wrap;*/
+    display: block;
+}
+
+.manageRenewalTotalCostTitle {
+    font-size: 16px;
+    vertical-align: middle;
+    float: left;
+}
+
+.customPrimaryContainer {
+    float: left;
+    width: 71%;
+    color: #555;
+    padding: 15px;
+}
+
+
+/* $16 - Security Certificate
+============================================================================== */
+#DigiCertClickID_sJlxdg39Seal img {
+    width: 75px !important;
+}
+
+.ft_sub_links_wrapper .ft_sub_links .ft_about_links .link_4 {
+    display: none !important;
+    height: 0px !important;
+    width: 0px !important;
+}
+/* $17 - Mi9 (ninemsn) Masthead
+============================================================================== */
+#mastheadDiv {
+    width: 980px; /* adjust it with the appropriate site width */
+}
+
+#mastHeadButtonCloseContainer /* Container of the button */ {
+    height: 0px; /* Setting height zero makes the div take no vertical space */
+    position: relative; /* allows button absolute positioning */
+    *width: 1007px; /* adjust it with the appropriate site width */
+    *z-index: 4; /* Needed in IE 6 and 7 to keep the button on top of the ad */
+}
+
+#mastheadAnchorToggle /* Button element */ {
+    z-index: 4; /*  set an appropriate z-index value */
+    height: 19px; /* button size */
+    width: 50px;
+}
+
+    #mastheadAnchorToggle:hover /* Button element - hover */ {
+        filter: alpha(opacity=80); /* Assign transparency */
+        -moz-opacity: 0.8;
+        -khtml-opacity: 0.8;
+        opacity: 0.8;
+    }
+
+.mastHeadButtonShown /* Class for button when the ad is shown*/ {
+    background: url("https://premier.ticketek.co.nz/images/buttons/ninemsnAdClose.png") top center no-repeat transparent; /* Use an image that says 'HIDE AD' here */
+    position: absolute;
+    top: 0px;
+    right: 24px;
+}
+
+.mastHeadButtonHidden /* Class for button when the ad is hidden*/ {
+    /* Use an image that says 'SHOW AD' here */
+    background: url("https://premier.ticketek.co.nz/show_ad.gif") top center no-repeat transparent; /* Use an image that says 'SHOW AD' here */
+    /*float: right; /* Use this block for the button to take space and push down the content
+    margin-top: 1px;
+    margin-right: 24px;
+    margin-bottom: 5px;*/
+    /*position: absolute; /* Use this block for absolute positioned button - will lay on top of the right column
+    top: 0px;
+    right: 24px;
+    _right: 28px;*/
+    /* display: none; /* Use this block for hidden button - no 'open ad functionality' */
+}
+
+.mastheadShown /* Masthead container - vertical margins for when the ad is shown*/ {
+    margin: 10px 0 20px 0;
+}
+
+.masthead_ninemsn_class_hide /* IMPORTANT: this is used to hide expanded ad elements */ {
+    display: none !important;
+    height: 0px !important;
+    overflow: hidden !important;
+}
+
+/*dropdown login/join now box */
+/*#headerBlue, #mastHead #mastHead_signin_search{position:relative;z-index:99999;}*/
+
+#mastHead {
+    margin: 0;
+    padding: 0;
+}
+
+    #mastHead #mastHead_signin_search {
+        background-color:  #007ACC;
+        padding: 12px 10px 5px 0;
+    }
+
+        #mastHead #mastHead_signin_search #arrow-up3 {
+            display: none;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 10px solid #fff;
+            position: absolute;
+            top: 52px;
+            left: 60px;
+        }
+
+        #mastHead #mastHead_signin_search #arrow-up4 {
+            display: none;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 10px solid #fff;
+            position: absolute;
+            top: 52px;
+            left: 175px;
+        }
+
+    #mastHead #mastHeadSignin {
+        padding: 0;
+        margin: 0;
+        color: #fff;
+        width: 375px;
+        position: absolute;
+    }
+
+    #mastHead .loginWrapper {
+        color: #00aced;
+        padding: 0 15px;
+        display: inline-block;
+        position: relative; /*margin-top: 2px;*/
+    }
+        /*#mastHead .loginWrapper .arrow{background: url("/images/signInBoxArrow2.png") no-repeat; opacity:0;height: 39px;left: 250px;top: 10px;position: absolute;width: 43px;}*/
+        #mastHead .loginWrapper a {
+            border: 1px solid #fff;
+            color: #fff;
+            display: inline-block;
+            font-size: 15px;
+            padding: 5px 20px;
+            margin-right: 5px;
+        }
+
+            #mastHead .loginWrapper a:hover {
+                border: 1px solid #F3F3F3;
+                color: #F3F3F3;
+            }
+
+
+    #mastHead .divide {
+        display: none !important;
+    }
+
+    #mastHead #searchModule {
+        width: 600px;
+        /*margin-top: 0;*/
+    }
+
+    #mastHead .loggedIn {
+        padding: 0px 10px;
+    }
+
+        #mastHead .loggedIn .welcomeMsg {
+            line-height: 22px;
+            font-size: 20px;
+        }
+
+        #mastHead .loggedIn .welcomeLinks {
+            line-height: 17px;
+            font-size: 12px;
+        }
+
+            #mastHead .loggedIn .welcomeLinks span {
+                font-size: 12px;
+            }
+
+        #mastHead .loggedIn a {
+            font-size: 12px;
+            color: #fff;
+            display: inline-block;
+            padding-right: 5px;
+            text-transform: none;
+        }
+
+            #mastHead .loggedIn a:hover {
+                color: #EBEBEB;
+            }
+
+    #mastHead .signInBar {
+        display: none;
+        position: absolute;
+        cursor: pointer;
+        background-color: #fee949;
+        /*font-family: 'Trebuchet MS';*/
+        width: 335px;
+        padding: 3px 5px 15px 15px;
+        top: 58px;
+        left: 0px;
+        z-index: 2;
+        height: auto;
+        border-right: 1px solid #EBEBEB;
+        border-bottom: 1px solid #EBEBEB;
+        border-left: 1px solid #EBEBEB;
+        -webkit-box-shadow: 0px 25px 50px 7px rgba(72,72,72,0.25);
+        -moz-box-shadow: 0px 25px 50px 7px rgba(72,72,72,0.25);
+        box-shadow: 0px 25px 50px 7px rgba(72,72,72,0.25);
+    }
+
+        #mastHead .signInBar a {
+            outline: none;
+            border: none;
+        }
+
+        #mastHead .signInBar .arrow-up1 {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 10px solid #fee949;
+            position: absolute;
+            top: -10px;
+            left: 50px;
+        }
+
+        #mastHead .signInBar .arrow-up2 {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 10px solid #fee949;
+            position: absolute;
+            top: -10px;
+            left: 165px;
+        }
+
+        #mastHead .signInBar .close {
+            float: right;
+            color: #555;
+            font-size: 12px;
+            margin: 0px 3px;
+            cursor: pointer;
+        }
+
+    #mastHead .signInBarHdr {
+        display: none;
+        color: #555;
+        font-size: 44px;
+        line-height: 40px;
+        text-transform: uppercase; /*height:0;*/
+        padding-top: 15px;
+    }
+
+    #mastHead .signInBarText {
+        display: none;
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+        margin: 10px 10px 0 0;
+        /*width: 270px;*/
+        font-size: 18px;
+        line-height: 17px;
+    }
+
+    /*#mastHead.signInDropBox .signInBarText{font-family: 'Waiting for the Sunrise', cursive;font-size: 21px;font-weight:bold;line-height: 31px;padding: 10px 0 0;text-align: left;text-transform: uppercase;color: #fff;overflow:visible;}*/
+    #mastHead #searchModule #searchWhat input {
+        width: 540px;
+        border-radius: 0 !important;
+        border: 0;
+        height: 24px;
+        padding-left: 20px;
+    }
+
+    #mastHead #searchModule #btnGo {
+        border: 0;
+        border-radius: 0;
+        height: 31px;
+        padding-top: 2px;
+        padding-right: 2px;
+    }
+
+    /*fixed header style*/
+    #mastHead.mastHeadFixed #mastHead_signin_search, #mastHead.mastHeadFixed #mastHeadSignin {
+        background-color: #007ACC;
+    }
+
+    #mastHead.mastHeadFixed #arrows-d, #mastHead.signInBarClosed #arrows-d, #mastHead.mastHeadFixed .signInBar,
+    #mastHead.mastHeadFixed #fixedLogo, #mastHead.signInBarClosed .signInBar {
+        display: none !important;
+    }
+
+/*footer*/
+#floatingbar-container .welcomeLinks, #floatingbar-container .signInBarText {
+    display: none !important;
+}
+
+/*floating Med Rec*/
+#ticketekMedRecCont {
+    background-color: #555;
+    bottom: 0;
+    margin-left: -55px;
+    width: 368px;
+    z-index: 999999999;
+    -webkit-transform: translateZ(0);
+    position: fixed;
+    max-height: 0px;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+#ticketekMedRecCont.fixed {
+    bottom: 59px;
+    max-height: 322px;
+    transition: all 4s ease-in;
+    -webkit-transition: all 4s ease-in;
+    -moz-transition: all 4s ease-in;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+#ticketekMedRec {
+    margin: auto 0;
+    background-color: #555;
+    padding: 20px 20px 40px;
+}
+
+#ticketekMedRecCont .close {
+    border: 1px solid #999;
+    border-radius: 14px;
+    color: #999;
+    float: right;
+    font-size: 14px;
+    padding: 2px 7px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#ticketekMedRec .ticketekMedRecLogo {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 90px;
+}
+
+#ticketekMedRec #ticketekMedRecText {
+    font-size: 16px;
+    color: #fff;
+    margin: 10px 0 20px;
+    text-align: center;
+}
+
+#ticketekMedRec .ticketekMedRecLink {
+    border: 0;
+    font-size: 14px;
+    padding: 10px 30px;
+    border: 0 !important;
+}
+
+#ticketekMedRec .JoinSign {
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+#ticketekMedRec .cross {
+    color: #fff;
+}
+
+#ticketekMedRec .or {
+    padding: 10px 0;
+}
+
+    #ticketekMedRec .or .text {
+        padding: 0 3px;
+    }
+
+#ticketekMedRec .line {
+    border-top: 1px solid #fff;
+    display: inline-block;
+    height: 1px;
+    width: 80px;
+    padding-bottom: 3px;
+}
+
+/*GOOGLE AD UNITS*/
+.adLeaderboard, .adLeaderboardLow {
+    width: 728px;
+    height: 90px;
+    float: right;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.adLeaderboardLow {
+    float: none;
+    margin-top: 0;
+}
+
+.adMRec {
+    height: 250px;
+    width: 300px;
+    overflow: hidden;
+}
+
+.columnLeft .adMRec {
+    margin-top: 20px;
+}
+
+.adMRecLow {
+    width: 300px;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.adSkin.hdrFxd {
+    position: fixed;
+    top: 69px;
+    width: 1920px;
+    height: 900px;
+}
+
+.adPanels {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    height: 900px;
+    width: 455px;
+}
+
+    .adPanels.L {
+        left: 0;
+    }
+
+    .adPanels.R {
+        right: 0;
+    }
+
+#sticky {
+    position: static;
+    top: 0;
+}
+
+    #sticky.scroll {
+        position: fixed;
+        top: 70px;
+    }
+
+    #sticky.bottom {
+        position: absolute;
+        top: auto;
+        bottom: 0%;
+    }
+
+.merchRadioBtn {
+    display: inline-block;
+    border: none;
+    background: #007ACC;
+    padding: 10px 18px 10px 18px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.merchButton {
+    display: inline-block;
+    padding: 10px 18px 10px 18px;
+    border: none;
+    background: #007ACC;
+    color: white;
+    margin-bottom: 8px;
+}
+
+#btnAddToCart:not(.disabled) {
+    cursor: pointer;
+}
+
+.sizeUnavailable {
+    background: gray;
+}
+
+.merchButton.disabled {
+    background: gray;
+}
+
+.merchBlock {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px 0 0;
+}
+
+hr {
+    display: block;
+    margin: 15px 0 15px 0;
+    padding: 0;
+}
+
+.merchContent {
+    font-size: 12px;
+}
+
+.merchSmallTitle {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.merchSelectOption {
+    font-size: 14px;
+}
+
+.merchSizeSelected {
+    background: yellow;
+    color: black;
+}
+
+.merchErrorMessage, .merchSuccessfulMessage {
+    padding: 2px 2px;
+}
+
+.merchSuccessfulMessage {
+    background: #8ee947;
+}
+
+.merchErrorMessage {
+    background: #eb7373;
+}
+
+.merchButtonGroup {
+    margin-top: 10px;
+}
+
+.slick-slide {
+    height: 456px;
+}
+
+.successMessage {
+    font-size: 12px;
+}
+
+/* Predictive Address START */
+
+.ui-menu .ui-menu-item {
+    text-align: left;
+    font-size: 12px;
+}
+
+.ui-widget-content {
+    border: 1px solid #DBDBDB !important;
+    color: #555 !important;
+    width: 400px;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+    border: none !important;
+    background: #00ACED !important;
+    font-weight: normal;
+    color: #FFF !important;
+    padding: 3px;
+    width: 100%;
+}
+
+/* Predictive Address END */
+
+/* Billbord Ad */
+
+#msnau_masthead {
+    margin: 7px auto;
+    width: 970px;
+}
+
+#close-msnau_masthead {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    right: 37px;
+    border-radius: 0px 0px 3px 3px;
+    display: inline;
+    background: none;
+    font-size: 1px;
+    color: #000;
+    width: 120px;
+    height: 60px;
+    /*border: 1px solid red;*/
+}
+
+#show-msnau_masthead {
+    font-size: 11px;
+    color: #000;
+    font-weight: normal;
+    text-align: right;
+    margin: 0px 0 0px 937px;
+    display: none;
+    position: relative;
+    top: 5px;
+}
+
+    #show-msnau_masthead:hover {
+        text-decoration: underline;
+    }
+
+
+#bg-exit {
+    background-color: rgba(255,255,255,0);
+    cursor: pointer;
+    height: 100%;
+    left: 897px;
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+}
+
+.gameDetails .gameDetailLeft {
+    display: inline-block;
+    width: 55%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+    .transactionHistoryMain .ticketForward a {
+        color: #0099CC;
+        padding-left: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        background-image: url("https://premier.ticketek.co.nz/images/giveToFriend.png");
+        background-size: 20px 17px;
+        background-repeat: no-repeat;
+    }
+
+        .transactionHistoryMain .ticketForward a:hover {
+            cursor: pointer;
+        }
+
+#ticketForwardPopup h2 {
+    color: #00ACED;
+}
+
+#ticketForwardDetails div {
+    min-height: 30px;
+    margin-bottom: 5px;
+    height: auto;
+}
+
+#ticketForwardDetails #tktForwardSuccessMsg {
+    color: green;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+}
+
+#ticketForwardDetails #tktForwardErrorMsg {
+    color: red;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+}
+
+.ticketForwardButton {
+    display: inline-block;
+    min-width: 80px;
+    margin: 0;
+    padding: 12px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #007ACC;
+    border: 0;
+    box-sizing: content-box;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.ticketForwardOverlay {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    background: #aaaaaa;
+    opacity: .6 /*{opacityOverlay}*/;
+    filter: Alpha(Opacity=30) /*{opacityFilterOverlay}*/; /* support: IE8 */
+    width: 100%;
+    height: 100%;
+}
+
+.ticketForwardDialog {
+    z-index: 1000;
+}
+
+.transactionHistoryMain .viewEzyTicket {
+    padding-top: 5px;
+    height: 20px;
+}
+
+    .transactionHistoryMain .viewEzyTicket a {
+        color: #0099CC;
+        padding-left: 35px;
+        text-decoration: none;
+        font-weight: bold;
+        background-image: url("https://premier.ticketek.co.nz/images/viewEzyTicket.png");
+        background-size: 20px 17px;
+        background-position: 10px 0;
+        background-repeat: no-repeat;
+    }
+
+.transactionHistoryMain .viewMobileTicket a {
+    color: #0099CC;
+    padding-left: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    background-image: url("https://premier.ticketek.co.nz/images/viewMobileTicket.png");
+    background-size: 20px 17px;
+    background-position: 10px 0;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#ticketForwardDetails input[type=text] {
+    padding: 6px;
+    display: inline-block;
+}
+
+#ticketForwardDetails #tktFirstName,
+#ticketForwardDetails #tktLastName {
+    width: 170px;
+}
+
+#ticketForwardDetails #tktEmailOrPhone {
+    width: 265px;
+}
+
+#ticketForwardDetails div span {
+    min-width: 92px;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: OpenSansSemiBold;
+}
+
+h2#ticketForwardTitle {
+    padding: 0;
+    margin: -5px 0 -20px 0;
+}
+
+.ticketForwardDialog .ui-dialog-titlebar {
+    display: none;
+}
+
+.ticketForwardDialog .ui-dialog-buttonset {
+    padding: 10px 5px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.ticketForwardEmail {
+    margin-top: 15px;
+}
+
+.transactionOrderBlock {
+    margin-top: 6px;
+    display: inline-block;
+    width: 100%;
+}
+
+    .transactionOrderBlock > div {
+        margin: 0;
+    }
+
+/* /member/transactions */
+
+ .transactionHistoryMain {
+    /*padding-bottom: 30px;*/
+    width: 100%;
+    padding-right: 25px;
+}
+
+.transactionRecord {
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.transactionProduct {
+    margin-bottom: 3px;
+}
+
+.transactionChildPerformance > .transactionDetails  {
+    background-color: lightblue;
+}
+
+.ticketDetails {
+    background-color: wheat;
+    padding-left: 10px;
+}
+
+.transactionHeader {
+    font-size: 15px;
+    line-height: 50px;
+    font-weight: bold;
+    background-color: #ebebeb;
+}
+
+.transactionHeader,
+.transactionHeaderSmall
+{
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.transactionHeaderSmall {
+    font-size: 12px;
+    line-height: 50px;
+    background-color: #ebebeb;
+}
+
+.transactionDetails {
+    background-color: lightcyan;
+    padding-left: 5px;
+}
+
+.transactionFieldTitle {
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.transactionFieldLeft {
+    display: inline-block;
+    padding-bottom: 5px;
+    width: 80%;
+}
+
+.transactionFieldRight {
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.transactionHeaderLeft {
+    float: left;
+    width:60%;
+    background-color: #ebebeb;
+}
+
+.transactionHeaderRight {
+    float: right; 
+    width:38%;
+    background-color: #ebebeb;
+}
+
+.transactionDetailLeft {
+    display: inline-block;
+    width:40%;
+    padding-left: 60px;
+    padding-right: 30px;
+}
+
+.transactionDetailRight {
+    display: inline-block;
+    width:35%;
+    padding-left: 120px;
+    vertical-align: top;
+}
+
+.gameSeparator {
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.gameSeparator .gameDetails {
+    padding-left: 10px;
+}
+
+.gameDetails .gameDetailLeft {
+    display: inline-block;
+    width:55%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.gameDetails .gameDetailRight {
+    display: inline-block;
+    width:30%;
+    padding-right: 2%;
+}
+
+#selectAllSeatsLabel {
+    display: inline-block;
+    padding: 12px;
+}
+ 
+#selectAllSeatsLabel.disabled {
+    background: none;
+    color: #999;
+}
+ 
+#sendSelectedTickets, #sendSelectedTickets:visited, #sendSelectedTickets:active, #sendSelectedTickets:hover {
+    color: #f33;
+    display: inline-block;
+    padding: 12px;
+    text-decoration: none;
+}
+ 
+#sendSelectedTickets {
+    float: right;
+}
+ 
+#sendSelectedTickets.disabled {
+    color: #c66;
+    background: inherit;
+    cursor: default;
+}
+ 
+#sendSelectedTickets.disabled:hover {
+    text-decoration: none;
+}
+ 
+.gameSeparator .selectSeat {
+    position: absolute;
+    left: 12px;
+    top: 38px;
+}
+ 
+.ticket-sent-icon {
+    display: inline-block;
+    margin: -3px 0;
+}
+
+.divAlignLeft {
+    float: left;
+}
+
+.divAlignRight {
+    float: right;
+}
+
+.transactionHistoryMain .pagination li {
+    display: inline;
+    padding: 0 5px 0 5px;
+    border-right: 1px solid #555;
+}
+
+.transactionHistoryMain .pagination {
+    text-align: right;
+}
+
+.transactionHistoryMain .pagination a {
+    font-weight: bold;
+    color: #0099CC;
+    font-size: 0.875em;
+    text-decoration: none;
+}
+
+.transactionHistoryMain .pagination .active a {
+    font-weight: bold;
+    color: black;
+    font-size: 0.875em;
+    text-decoration: none;
+}
+
+.transactionHistoryMain .viewDetails {
+    height: 30px;    
+}
+
+.transactionHistoryMain .viewDetails a {
+    color: #0099CC;
+    padding-left: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    background-image: url("https://premier.ticketek.co.nz/images/viewdetails.png");
+    background-size: 20px 17px;
+    background-position: 10px 0;
+    background-repeat: no-repeat;
+    min-height: 24px;
+    display:inline-block;
+}
+
+.transactionHistoryMain .viewDetails a:hover {
+    cursor: pointer;
+}
+
+.transactionHistoryMain .selectDetails {
+    height: 70px;
+}
+
+.transactionHistoryMain .selectDetails a {
+    color: #0099CC;
+    padding-left: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    background-image: url("https://premier.ticketek.co.nz/images/selectitems.png");
+    background-size: 20px 17px;
+    background-position: 10px 0;
+    background-repeat: no-repeat;
+}
+
+.transactionHistoryMain .selectDetails a:hover {
+    cursor: pointer;
+}
+
+.transactionHistoryMain .actions a {
+    color: #0099CC;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.transactionHistoryMain .actions a:hover {
+    cursor: pointer;
+}
+
+.transactionHistoryMain .transactionHistoryHeader {
+    font-weight: bold;
+    font-size: 22px;
+    color: #00ACED;    
+}
+.productSelection {
+    display: inline-block;
+    width:90%;
+    padding-left: 2%;
+}
+.productSelection .productDetails {
+    height: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.productSelection .productDetails .productHeader {
+    display: inline-block;
+    width:100%;
+    font-weight: bold;
+    background-color: #ebebeb;
+    height: 30px;
+}
+.productSelectionHeader {
+    height: 30px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.productSelect {
+    display: inline-block;
+    width: 5%;
+}
+.productDate {
+    display: inline-block;
+    width: 20%;
+}
+.productName {
+    display: inline-block;
+    width: 43%;
+}
+.productVenue {
+    display: inline-block;
+    width: 28%;
+}
+
+.allocate {
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.allocate input {
+    display: inline-block;
+    min-width: 114px;
+    margin: 0;
+    padding: 12px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #007ACC;
+    border: 0;
+    box-sizing: content-box;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.transactionHistoryMain .errorMsg {
+    padding-left: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+.manageAccountBlurb 
+{
+    text-align: center; 
+    padding: 10px 0; 
+    font-size: 14px;
+}
+
+#wheresMyTicketHeader{
+    font-size: 16px;
+    color: #555;
+    background-color: #f3f3f3;
+    border: 1px solid #EBEBEB;
+    padding: 10px;
+    line-height: 1.8em;
+    display: inline-block;
+    width: 98%;
+}
+
+#wheresMyTicketSectionHeader{
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 18px;
+    background: #086C9A;
+    text-transform: capitalize;
+    height: 35px;
+    color: #fff;
+    width: 99%;
+}
+
+.wheresMyTicketLeftCol{
+    display: inline-block;
+    width: 70%;
+}
+
+.wheresMyTicketRightCol{
+    display: inline-block;
+}
+
+.wheresMyTicketTitles{
+    font-weight: bold;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+#wheresMyTicketEvents{    
+    background-color: #f3f3f3;
+    margin-left: 5px;
+    width: 99%;
+    font-size: 14px;
+}
+
+.wheresMyTicketRow:first-child{
+    padding-top: 15px;
+}
+
+.wheresMyTicketRow:last-child{
+    padding-bottom: 15px;
+}
+
+.wheresMyTicketRow{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.wheresMyTicketDate{
+    padding-left: 20px;
+}
+
+.wheresMyTicketRowHr{
+    background-color: #ccc;
+    width: 97%;
+    margin: 18px auto;
+}
+
+button#captchaRefresh {
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    vertical-align: top;
+    line-height: 45px;
+}
+.adLeaderboard, .adLeaderboardLow, .adLeaderboardTop{
+    width: 728px;
+    height: 90px;
+    float: right;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.adMRecMasterCard{
+    padding:10px 0px;
+}
+
+.floatingMasterCard{
+    display: inline-block;
+    max-width: 200px;
+    vertical-align: text-bottom;
+    cursor:pointer;
+}
+
+.floatingMasterCard img{
+    vertical-align: middle;
+    width: 50px;
+}
+
+.floatingMasterCard .mcText{
+    display:inline-grid;
+    font-size: 14px;
+    font-weight: bold;
+    display: -ms-inline-grid;
+    -ms-grid-columns: 30px 30px 30px 30px;
+    -ms-grid-rows: 0 0 5px 10px;
+}
+
+.floatingMasterCard .mcText .mcSubCap{
+    font-size:12px;
+    display:ruby;
+}
+
+.admasterCard{
+    pointer-events: none;
+}
+
+.admasterCard > .adMRecMasterCard{
+    position: absolute;
+    bottom: 73px;
+    right: 45px;
+}
+
+div#DigiCertClickID_GDhFOR_2 img {
+    margin-left: 20px !important;
+}

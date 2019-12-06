@@ -1,0 +1,234 @@
+#socialfloat,
+#socialside,
+#socialfloat p {
+    display: none;
+    list-style: none;
+    z-index: 999;
+}
+
+#socialside {
+    margin-left: -3px;
+}
+
+#socialfooter {
+    margin-top: 12px;
+}
+
+#socialfooter ul {
+    display: inline-block;
+    width: 31px;
+    vertical-align:top;
+}
+#socialfooter li
+{
+    height: 26px;
+    width: 26px;
+    padding: 0 0 5px 0;
+}
+#socialside li.facebook a,
+#socialfloat li.facebook a,
+#socialfooter li.facebook a {
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Facebook_Off.jpg");
+    background-size: contain;
+}
+
+#socialside li.facebook a:hover,
+#socialfloat li.facebook a:hover,
+#socialfooter li.facebook a:hover {
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Facebook_On.jpg");
+    background-size: contain;
+}
+
+#socialside li.twitter a,
+#socialfloat li.twitter a,
+#socialfooter li.twitter a {
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Twitter_Off.jpg");
+    background-size: contain;
+}
+
+#socialside li.twitter a:hover,
+#socialfloat li.twitter a:hover,
+#socialfooter li.twitter a:hover {
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Twitter_On.jpg");
+    background-size: contain;
+}
+
+#socialside li.youtube a,
+#socialfloat li.youtube a,
+#socialfooter li.youtube a {
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Youtube_Off.jpg");
+    background-size: contain;
+}
+
+#socialside li.youtube a:hover,
+#socialfloat li.youtube a:hover,
+#socialfooter li.youtube a:hover {
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Youtube_On.jpg");
+    background-size: contain;
+}
+
+#socialside li.instagram a,
+#socialfloat li.instagram a,
+#socialfooter li.instagram a {
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Instagram_Off.jpg");
+    background-size: contain;
+}
+
+#socialside li.instagram a:hover,
+#socialfloat li.instagram a:hover,
+#socialfooter li.instagram a:hover {
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Instagram_On.jpg");
+    background-size: contain;
+}
+/*#socialside li.apple a,
+#socialfloat li.apple a,
+#socialfooter li.apple a{
+	background-image:url(/images/social/homeSidebar/app_off.png);
+}
+#socialside li.apple a:hover,
+#socialfloat li.apple a:hover,
+#socialfooter li.apple a:hover{
+	background-image:url(/images/social/homeSidebar/app_on.png);
+}*/
+#socialside ul {
+    position: absolute;
+    left: 1000px;
+    /*background:rgba(5, 55, 107, 0.8);*/
+    background: #fff;
+    padding: 5px;
+    border-radius: 0 5px 5px 0;
+    /*border: solid 1px #0c4e99;*/
+    border: solid 1px #ebebeb;
+    border-left: none;
+}
+
+#socialfloat {
+    float: left;
+    height: 34px;
+    margin: 14px 0 4px 5px;
+    padding: 4px 2px 0px 2px;
+    background-color: transparent;
+}
+
+#socialside li, #socialfloat li {
+    position: relative;
+    margin-bottom: 0.688em;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    display: block;
+}
+
+#socialfloat li {
+    float: left;
+    padding: 0;
+    margin: 0 4px;
+}
+
+#socialside li.facebook:hover p {
+    width: 125px;
+}
+
+#socialside li.twitter:hover p {
+    width: 115px;
+}
+
+#socialside li.youtube:hover p {
+    width: 130px;
+}
+
+#socialside li.instagram:hover p {
+    width: 157px;
+}
+/*#socialside li.app:hover p{
+	width:157px;
+}*/
+#socialfloat li a, #socialside li a, #socialfooter li a {
+    font-size: 0px;
+    line-height: 0px;
+    height: 26px;
+    width: 26px;
+    display: block;
+    cursor: pointer;
+    background-color: #434343;
+}
+
+#socialside li img, #socialfloat li img {
+    width: 30px;
+    height: 30px;
+}
+
+#socialside li:last-child {
+    position: relative;
+    margin-bottom: 0;
+}
+
+#socialside li p, #socialfloat li p {
+    position: absolute;
+    top: 0px;
+    left: 47px;
+    white-space: nowrap;
+    font-size: 13px;
+    color: #F9F9F9;
+    background: #403f43;
+    border: 3px solid #F9F9F9;
+    padding: 5px 8px 7px 8px;
+    width: 0px;
+    display: none;
+    /*font:12px Arial, Helvetica, sans-serif;*/
+    font-size: 12px;
+}
+
+#socialside li:hover p {
+    display: block;
+}
+
+#socialside li p:before {
+    right: 100%;
+    border: 13px solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #F9F9F9;
+    top: 0px;
+    left: auto;
+}
+#socialfooter .app span{
+    display:block;
+    width: 26px;
+    height:26px;
+    cursor:pointer;
+}
+#socialfooter .dl_iphone span{
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Apple_Off.jpg");
+}
+#socialfooter .dl_iphone:hover span{
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Apple_On.jpg");
+}
+#socialfooter .dl_android span{
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Android_Off.jpg");
+}
+#socialfooter .dl_android:hover span{
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Android_On.jpg");
+}
+#socialfooter .dl_windows span{
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Windows_Off.jpg");
+}
+#socialfooter .dl_windows:hover span{
+    background-image: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Windows_On.jpg");
+}
+body:after {
+    /*gets rid of flicker on hover*/
+    content: url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Windows_On.jpg") 
+             url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Android_On.jpg")
+             url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Apple_On.jpg")
+             url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Facebook_On.jpg")
+             url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Twitter_On.jpg")
+             url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Youtube_On.jpg")
+             url("https://premier.ticketek.co.nz/images/social/Ticketek_Footer_Instagram_On.jpg");    
+    display: none;
+}

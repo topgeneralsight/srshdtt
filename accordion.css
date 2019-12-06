@@ -1,0 +1,693 @@
+/* Accordions v1.0
+=======================================================*/
+a:hover {
+    text-decoration: none;
+}
+
+/* accordion content structures */
+.accordionContentContainer {
+    height: 0px;
+    overflow: hidden;
+}
+
+.accordionWideContentContainer {
+    width: 623px;
+    height: 0px;
+    overflow: hidden;
+}
+
+.accordionContent {
+    background-color: #fff;
+    color: #555;
+    font-size:1.2em !important;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+    .accordionContent div {
+        padding: 10px 0;
+    }
+
+    .accordionContent .venueInfoIcon {
+        width: auto;
+        padding: 0 10px;
+    }
+
+    .accordionContent li {
+        padding: 3px 0;
+    }
+
+td.widthVenueTD {
+    width: 140px;
+}
+
+#accordionDarkBlue, #accordionMedBlue, #accordionLightBlue, #accordionYellow#accordionMedGreen {
+    width: 300px;
+}
+
+    #accordionMedBlue .accordionContent, #accordionLightBlue .accordionContent, #accordionDarkBlue .accordionContent, #accordionYellow .accordionContent {
+        width: 278px; /* + 10px padding + 1px border makes it 300px wide */
+    }
+
+#accordionGold, #accordionBlueSmall {
+    width: 271px; /* + 10px padding makes it 271px wide */
+    text-align: left;
+    margin: 0 auto;
+    margin: 8px auto 0 auto;
+    padding: 0 5px;
+    background: #fff;
+}
+
+    #accordionGold .accordionContent, #accordionBlueSmall .accordionContent {
+        width: 251px;
+        background-color: #fff;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    #accordionBlueSmall .accordionContent {
+        width: 251px;
+        font-size: 1em;
+    }
+
+#accordionBlueWide, #accordioBlueWide .accordionContent {
+    width: 623px;
+}
+
+/* accordion content styling */
+#accordionMedBlue .accordionContent,
+#accordionDarkBlue .accordionContent,
+#accordionLightBlue .accordionContent,
+#accordionYellow .accordionContent,
+#accordionBlueSmall .accordionContent {
+    /*background:#dcefff url(/images/accorContent_BG_small.jpg) bottom right no-repeat;*/
+    background-color: #fff;
+    color: #555 !important;
+}
+
+
+/*visa page RHS*/
+#secondaryContainer #accordionMedBlue .accordionContent {
+    background-color: #f3f3f3;
+}
+
+.accordionContent h4 {
+    font-size: 1.1em;
+}
+
+#accordionBlueWide .accordionContent {
+    padding: 0 !important;
+}
+
+#accordionMedBlue .accordionContent {
+    border-left: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+#accordionDarkBlue .accordionContent {
+    border-left: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+}
+
+#accordionLightBlue .accordionContent {
+    border-left: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+#accordionYellow .accordionContent {
+    border-left: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+.accordionContent a {
+    color: #00ACED;
+}
+
+    .accordionContent a:hover {
+        color: #00C0ED;
+    }
+
+/* Accordion Bars (All colors) */
+
+/* standard bar */
+.accordionBar {
+    width: 263px;
+    height: 19px;
+    padding: 6px 0px 0px 35px; /* extra 35px makes total width 300px */
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: relative;
+    overflow: hidden;
+}
+
+/* wide bar */
+#accordionBlueWide .accordionBar {
+    width: 588px;
+    padding: 6px 0px 0px 35px; /* extra 35px makes total width 275px */
+    color: #555;
+}
+
+/* short bar */
+#accordionGold .accordionBar {
+    width: 246px;
+    padding: 6px 0px 0px 25px; /* extra 25px makes total width 271px */
+    color: #555;
+}
+
+#accordionMedBlue .accordionBar {
+    color: #555;
+    border-left: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+    border-top: 1px solid #EBEBEB;
+    font-size: 1.2em;
+}
+
+#accordionLightBlue .accordionBar {
+    border-left: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+    border-top: 1px solid #EBEBEB;
+}
+
+#accordionYellow .accordionBar {
+    color: #555;
+    border-left: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+    border-top: 1px solid #F3F3F3;
+    border-bottom: 1px solid #EBEBEB;
+}
+
+#accordionDarkBlue .accordionBar {
+    color: #555;
+    border-left: 1px solid #F3F3F3;
+    border-right: 1px solid #F3F3F3;
+    border-top: 1px solid #F3F3F3;
+}
+
+#accordionBlueSmall .accordionBar {
+    width: 236px;
+    padding: 6px 0px 0px 35px; /* extra 25px makes total width 271px */
+    color: #555;
+}
+
+#accordionBlueWide .accordionBar span {
+    font-weight: normal !important;
+    color: #555 !important;
+}
+
+.accordionBar .status {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-weight: normal;
+}
+
+    .accordionBar .status span {
+        color: red;
+        font-weight: bold;
+    }
+
+#accordionGold .closedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBarGold.jpg");
+    background-position: bottom;
+}
+
+#accordionGold .openedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBarGold.jpg");
+    background-position: top;
+}
+
+#accordionLightBlue .closedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBarLight.jpg");
+    background-position: bottom;
+}
+
+#accordionLightBlue .openedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBarLight.jpg");
+    background-position: top;
+}
+
+#accordionMedBlue .openedBar, #accordionMedBlue .closedBar {
+    font-weight: bold;
+    margin: 10px 0px 0px 0px;
+    padding: 7px 5px 2px 10px !important;
+    background-color: #F3F3F3;
+    border-bottom: solid #EBEBEB 1px;
+    color: #555;
+    background-image: none !important;
+    text-transform: uppercase;
+    width: 285px;
+    border: none;
+}
+
+    #accordionMedBlue .openedBar .arrow {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #555;
+        float: right;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+
+    #accordionMedBlue .closedBar .arrow {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #555;
+        float: right;
+        margin-top: 5px;
+        margin-right: 5px;
+    }
+/*#accordionMedBlue .closedBar { }
+#accordionMedBlue .openedBar {  }*/
+
+#accordionDarkBlue .closedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBarDark.jpg");
+    background-position: bottom;
+}
+
+#accordionDarkBlue .openedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBarDark.jpg");
+    background-position: top;
+}
+
+#accordionBlueWide .closedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBlueWide.jpg");
+    background-position: bottom;
+}
+
+#accordionBlueWide .openedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBlueWide.jpg");
+    background-position: top;
+}
+
+.accordionBlueWidev2, .accordionBlueWidev2 .accordionContent {
+    width: 622px !important;
+}
+
+    .accordionBlueWidev2 .openedBar, .accordionBlueWidev2 .closedBar {
+        font-weight: bold;
+        height: 20px;
+        padding: 5px 5px 5px 10px !important;
+        margin: 5px 10px;
+        background-color: #F3F3F3;
+        border-bottom: solid #EBEBEB 1px;
+        color: #555;
+        background-image: none !important;
+        text-transform: uppercase;
+    }
+
+        .accordionBlueWidev2 .closedBar .arrow {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid #555;
+            float: right;
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+
+        .accordionBlueWidev2 .openedBar .arrow {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #555;
+            float: right;
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+
+#accordionYellow .closedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBarYellow.jpg");
+    background-position: bottom;
+    margin: 10px 0px 0px 0px;
+}
+
+#accordionYellow .openedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBarYellow.jpg");
+    background-position: top;
+    margin: 10px 0px 0px 0px;
+}
+
+#accordionBlueSmall .closedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBarMedium.jpg");
+    background-position: top left;
+    margin: 10px 0px 0px 0px;
+}
+
+#accordionBlueSmall .openedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBarMedium.jpg");
+    background-position: bottom left;
+    margin: 10px 0px 0px 0px;
+}
+
+/* Accordion Content Tables */
+.accordionContent table {
+    margin: 10px 0;
+    width: auto;
+}
+
+    .accordionContent table.tableCentered {
+        margin: 5px auto 10px auto;
+        width: auto;
+    }
+
+.accordionContent div.showPhotosContainer {
+    margin: 2px auto 0 auto;
+    width: 236px;
+}
+
+    .accordionContent div.showPhotosContainer div {
+        margin: 0 0 2px 0;
+        padding: 0;
+    }
+
+    .accordionContent div.showPhotosContainer a {
+        margin: 0 5px;
+        padding: 0;
+    }
+
+.accordionContent td {
+    padding: 5px;
+    vertical-align: top;
+}
+
+    .accordionContent td h3 {
+        font-weight: bold;
+        font-size: 1.1em;
+        margin: 4px 0 0 0;
+        padding: 0;
+    }
+
+.accordionContent table.pricingTable {
+    width: 100%;
+    text-align: left;
+}
+
+table.pricingTable td.TDpriceType {
+    width: 70%;
+}
+
+table.pricingTable td.TDprice {
+    width: 30%;
+    text-align: right;
+}
+
+/*support info */
+div.additionalBlock img {
+    float: left;
+    margin: 0 10px 0 0;
+}
+
+/*
+.questions a{font-weight:bold;padding-left:10px;}
+.questions p{padding:10px 25px 0 25px;margin:0;}
+*/
+
+
+/* Help page sub content */
+
+/* just to add a shadow at the bottom of every wide accordion module */
+.accorWideShadowBottom {
+    background: url("https://premier.ticketek.co.nz/images/accorWideShadowBottom.jpg") bottom left repeat-x;
+    padding: 0 10px !important;
+}
+
+.questions a {
+    font-weight: 500;
+    padding-left: 10px;
+    /*background:url(/images/listArrowBlue.gif) no-repeat scroll 1px 7px transparent;*/
+    background: url("https://premier.ticketek.co.nz/images/2013/listArrowGrey.gif") no-repeat scroll 1px 7px transparent;
+    display: block;
+    padding: 3px 0 3px 10px;
+}
+
+#first div.questions {
+    padding: 4px 0px;
+}
+
+#first div.accordionSubContent {
+    padding: 0px;
+    background: url("https://premier.ticketek.co.nz/images/50whiteBg.jpg") top right repeat-y scroll transparent;
+}
+
+    #first div.accordionSubContent div.accordionSubContent {
+        padding: 10px 10px 10px 30px;
+    }
+
+.accordionContent #first div {
+    padding-left: 20px;
+}
+
+.accordionContentShare {
+    background-color: #fff;
+    color: #555;
+    font-size: 1.1em;
+    padding: 5px 1px 5px 1px;
+    overflow: hidden;
+}
+
+    .accordionContentShare li {
+        background: url("https://premier.ticketek.co.nz/images/listArrowBlue.gif") no-repeat;
+        background-position: 1px 7px;
+        display: block;
+        padding: 3px 0 3px 10px;
+    }
+
+/*my list */
+table.myListTable {
+    width: 100%;
+    border-bottom: 1px solid #ebebeb;
+    margin: 0;
+    padding: 0;
+}
+
+.noBorderBottom {
+    border-bottom: 0 !important;
+}
+
+table.myListTable td {
+    vertical-align: middle;
+}
+
+    table.myListTable td.buyNowCell {
+        background-color: #f3f3f3;
+        text-align: center;
+        padding: 5px;
+    }
+
+.relWrap {
+    padding: 0;
+    margin: 0;
+}
+
+/*
+    A Titled box with the same styling as an accordion
+*/
+
+#accordionLightBlue.titledBox {
+    margin-top: 1em;
+}
+
+
+    #accordionLightBlue.titledBox .accordionBar {
+        cursor: default;
+        padding-left: 10px;
+        width: 288px;
+        background-image: url("https://premier.ticketek.co.nz/images/headingBarLight.jpg");
+        color: #fff;
+    }
+
+/* Styling for FAQs elements */
+
+.faqsTitle {
+    font-weight: bold;
+    height: 20px;
+    padding: 5px;
+    margin: 5px 0 5px -15px;
+    background-color: #F3F3F3;
+    border-bottom: 1px solid #EBEBEB;
+    color: #555;
+}
+
+    .faqsTitle a {
+        font-weight: 100;
+        color: #fff !important;
+    }
+
+.faqsAnswers {
+    padding: 0 0 15px 15px;
+}
+
+.faqsTop {
+    padding: 15px 5px 15px 0;
+    text-align: right;
+}
+
+.faqsAnswers ul {
+    margin: 0 0 15px 15px;
+    list-style-type: disc;
+    line-height: 1.5em;
+}
+
+.faqsAnswers li {
+    margin: 0 0 10px 0px;
+    list-style-type: disc;
+    line-height: 1.5em;
+}
+
+/* Styling for Social (Share) elements */
+
+#accordionSocial {
+    width: 299px;
+    margin: 10px 0 5px 0;
+}
+
+    #accordionSocial .accordionBar {
+        color: #0d316d;
+        border-left: 1px solid #205FA6;
+        border-right: 1px solid #205FA6;
+        border-top: 1px solid #205FA6;
+        border-bottom: 1px solid #205FA6;
+        background-image: url("https://premier.ticketek.co.nz/images/accorBarGreen.jpg");
+        background-position: top;
+        cursor: auto;
+    }
+
+    #accordionSocial .accordionContentShare {
+        width: 296px; /* + 5px padding + 1px border makes it 300px wide */
+        overflow: visible;
+        background: #fff;
+        color: #0d316d !important;
+        border-left: 1px solid #205FA6;
+        border-right: 1px solid #205FA6;
+        border-bottom: 1px solid #205FA6;
+    }
+
+    #accordionSocial .others, #accordionSocial .tw_follow {
+        float: left;
+        margin-top: 5px;
+        padding: 5px 0 0;
+        border-top: 1px dashed #D4D4FC;
+        width: 295px;
+    }
+
+        #accordionSocial .others div, #accordionSocial .tw_follow div {
+            float: left;
+        }
+
+    #accordionSocial .tw_follow {
+        padding: 5px 0 0px 6px;
+    }
+
+/* Retro performance selector */
+
+#perfPricing .eventPricingTitlebar {
+    /*font-size: 12px;*/
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 26px;
+    padding: 5px 0 5px 12px;
+    margin-top: 8px;
+    clear: left; /*line break for view venue map*/
+}
+
+#perfPricing .accordionContent {
+    color: #555;
+    font-size: 12px;
+    padding: 0 10px 0 0px;
+}
+
+#perfPricing .accordionBar {
+    border-top: 1px solid #ebebeb;
+}
+
+#perfPricing #accordionGold .accordionBar {
+    width: 100%;
+    padding: 10px 0px 5px 0px; /* extra 25px makes total width 271px */
+    color: #555;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#perfPricing #accordionGold .closedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBarWhite.png");
+    background-position: bottom;
+}
+
+#perfPricing #accordionGold .openedBar {
+    background-image: url("https://premier.ticketek.co.nz/images/accorBarWhite.png");
+    background-position: top;
+}
+
+#perfPricing .accordionContent table {
+    margin: 0 0 10px 0;
+    width: 100%;
+}
+
+#perfPricing .accordionContent td {
+    text-align: left;
+}
+
+    #perfPricing .accordionContent td.alignRight {
+        text-align: right;
+    }
+
+#showDisability {
+    background: #F3F3F3;
+    width: 290px;
+    height: 26px;
+    margin: 5px 0 5px 1px;
+    /*color:#0F3F81;*/
+    border-bottom: 1px solid #EBEBEB;
+    padding-left: 10px;
+    padding-top: 5px;
+    /*font-size:11px;*/
+    font-size: 1.2em;
+    line-height: 22px;
+}
+
+
+
+/*ACCORDION YELLOW CHANGES - NEW DESIGN OVERIDE
+#accordionYellow{
+	float:left;
+	margin:0 0 15px 0;
+}
+#accordionYellow + #accordionYellow{
+	margin-left:20px;
+}
+#accordionYellow .closedBar { 
+	background:#f3f3f3 url(/images/accorBarGrey.png);
+	background-position:top; 
+	margin:10px 0px 0px 0px;
+	height:30px;
+	line-height:28px;
+	font-size:14px;
+}
+#accordionYellow .openedBar { 
+	background:#f3f3f3 url(/images/accorBarGrey.png);
+	background-position:bottom; 
+	margin:10px 0px 0px 0px;
+	height:30px;
+	line-height:28px;
+	font-size:14px;
+}
+#accordionYellow .accordionBar{
+	padding:0px 30px 0 15px;
+}
+#accordionYellow .accordionContent{
+	width:288px;
+	
+}*/

@@ -1,0 +1,216 @@
+/* Main Style Sheet for jQuery Calendar */
+#calendar_div, .calendar_inline {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+
+#calendar_div {
+	display: none;
+	border: 1px solid #81C3FF;
+	z-index: 2000; /*must have*/ 
+	background:#9DD0FB url("https://premier.ticketek.co.nz/images/datePicker_BG.jpg") top right no-repeat; 
+	color:#0f4c8c;
+	font-size:11px;
+}
+
+#calendar_div, .calendar_control, .calendar_links, .calendar_header, .calendar {
+	width: 185px;
+}
+.calendar_inline {
+	float: left;
+	display: block;
+	border: 0;
+}
+.calendar_dialog {
+	padding: 5px !important;
+}
+button.calendar_trigger {
+	width: 25px;
+}
+img.calendar_trigger {
+	margin-left:2px;
+	vertical-align: top;
+}
+.calendar_prompt {
+	float: left;
+	width: 181px;
+	padding: 2px;
+	background-color: #ddd;
+	color: #000;
+}
+
+* html .calendar_prompt {
+	width: 185px;
+}
+
+.calendar_control, .calendar_links, .calendar_header, .calendar {
+	clear: both;
+	float: left;
+	color: #fff;
+}
+
+.calendar_control {
+	background: #BCDFFD;
+	padding:4px 0 4px 0;
+}
+
+.calendar_control a {
+	padding-left:5px;
+	padding-right:5px;
+	color:#5487B9;
+	font-size:10px;
+	letter-spacing:0;
+}
+
+/* header (previous + next) */
+.calendar_links {
+	height:17px;
+	width:100%; 	
+	background:#9FD4FE url("https://premier.ticketek.co.nz/images/calendar_monthPick.jpg") top left no-repeat;
+	color:#ffffff;
+	padding-top:3px;
+}
+
+.calendar_control, .calendar_links {
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.calendar_links label { /* disabled links */
+	padding: 2px 5px;
+	color: #888;
+}
+
+/* next and previous arrows */
+
+.calendar_prev,
+.calendar_next { height:18px; width:18px; position:relative; cursor:pointer; }
+
+.calendar_prev { margin:-3px 0 0 1px; }
+.calendar_next { margin:-3px 1px 0 0; }
+
+.calendar_prev img { position:absolute; top:6px; left:2px; }
+.calendar_next img { position:absolute; top:6px; right:2px; }
+
+.calendar_prev,
+.calendar_next a { display:block; height:18px; width:18px; }
+
+.calendar_clear, .calendar_prev {
+	float: left;
+}
+
+.calendar_current {
+	float: left;
+	width: 35%;
+	text-align: center;
+	display:none;
+}
+
+.calendar_close, .calendar_next {
+	float: right;
+}
+
+.calendar_header {
+	text-align: center;
+	font-weight:normal;
+}
+
+calendar_links select {
+	color: #fff;
+	border: 0px;
+	font-weight: bold;
+}
+
+.calendar {
+	text-align: center;
+	padding:3px;
+}
+
+.calendar a {
+	display: block;
+	width: 100%;
+}
+
+/* Days row styles */
+.calendar .calendar_titleRow {
+	padding:3px 0 3px 0;
+	font-weight:bold;
+	color:#5487B9 !important;
+}
+
+.calendar .calendar_titleRow a {color:#5487B9 !important;}
+.calendar .calendar_daysRow {
+	color: #666;
+}
+
+/* ********************************************************** */
+/*            ALL DAYS           */
+
+.calendar_daysCell,
+.calendar_daysCell a { color: #0f4c8c; }
+.calendar_daysCell a {
+	display: block;
+}
+
+.calendar_daysCell,
+.calendar .calendar_unselectable {
+	height:16px;
+	width:16px;
+	padding:3px;
+}
+
+/* day rollover states */
+.calendar .calendar_daysCellOver { background-color:white; color: #0f4c8c; }
+/* ********************************************************** */
+
+
+/* Weekends  */
+.calendar .calendar_weekEndCell { }
+
+/* Days that can't be selected */
+.calendar .calendar_unselectable {
+	color: #8cafdd !important;
+	
+}
+
+/* Today's date */
+.calendar_today {background: #fff !important; }
+
+/* Date selected by user */
+.calendar_currentDay {  background-color: #0E3F81 !important; padding:0; }
+.calendar_currentDay a { color:#FFD41F;}
+.calendar_currentDay a:hover { background-color: white !important;  color:#0f4c8c; padding:3px 0 3px 0; }
+
+/* ________ CALENDAR LINKS _______
+
+** Reset link properties and then override them with !important */
+#calendar_div a, .calendar_inline a {
+	cursor: pointer;
+	margin: 0;
+	background: none;
+}
+
+/* ___________ IE6 IFRAME FIX ________ */
+
+.calendar_cover {
+    display: none; /*sorry for IE5*/
+    display/**/: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 193px; /*must have to match width and borders*/
+    height: 200px; /*must have to match maximum height*/ 
+}
+
+.tbMonthYeaar{color:white; padding-top:2px; letter-spacing:1px;}
+
+.calendar_otherMonth
+{
+	visibility:hidden;
+}
+
+

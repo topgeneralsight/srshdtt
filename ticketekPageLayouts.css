@@ -1,0 +1,2979 @@
+/*
+	PAGE LAYOUTS CSS DEFINITIONS
+	=============================
+	Author:		the white agency
+	Born:		25/08/07
+	Modified:
+	Project:	Ticketek
+
+	Purpose: 	This stylesheet defines the styles used by the content pages, i.e. events, venues etc.
+	Dependancy:	ticketekCore.css
+*/
+
+/*
+	COLOURS
+	White --------- #fff
+	Blue ---------- #00ACED
+    Green --------- #6AC63F
+	Yellow -------- #fee949
+	Darkest Grey -- #434343
+	Dark Grey ----- #555
+	Grey ---------- #dbdbdb
+	Light Grey ---- #ebebeb
+	Lightest Grey - #f3f3f3
+*/
+
+
+/* Font Definition for Open Sans.
+	Light:       200
+	Regular:     400
+	Semi Bold:   500
+	Bold:        700
+	Extra Bold:  900
+*/
+
+/* Put margin at top of pages with NO secondary Nav */
+.marginTop {
+    margin-top: 34px !important;
+}
+
+#island300x600 {
+    clear: both;
+    width: 300px;
+    height: 600px;
+    margin: 10px 0 10px 0;
+}
+/* Events Pages
+============================================================================== */
+#eventInfoWrap {
+    padding: 0;
+}
+
+    #eventInfoWrap .columnLeft, #eventInfoWrap .columnRight {
+        width: 320px;
+        float: left;
+    }
+
+    #eventInfoWrap .columnLeft {
+        margin: 0 10px 0 0;
+    }
+
+    #eventInfoWrap .columnRight {
+        margin: 0;
+    }
+
+        #eventInfoWrap .columnRight ul {
+            font-size: 1.2em !important;
+        }
+
+    #eventInfoWrap span {
+        color: #00aced;
+    }
+
+.buyTicketsContent {
+    width: 298px;
+    padding: 1px 0px;
+    text-align: left;
+    position: relative;
+    min-height: 271px;
+}
+
+.buyTicketsInformation {
+    padding: 0 12px;
+    font-size: 1.2em;
+    /*line-height: 1.6em;*/
+}
+
+    .buyTicketsInformation .performancePast {
+        background-color: #FFF;
+        padding: 5px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #FF0000;
+    }
+
+    .buyTicketsInformation .note {
+        margin-top: 25px;
+    }
+
+        .buyTicketsInformation .note p:first-child {
+            margin: 20px 0 10px;
+            font-size: 0.9em;
+            line-height: 1.6em;
+        }
+
+    .buyTicketsInformation .alocExha {
+        padding: 6px 3px;
+        background-color: #FFF;
+        color: #F00;
+        font-weight: 500;
+        text-align: center;
+    }
+
+.cc-fee-blurb {
+    display: none;
+}
+
+.buyTicketsContent .label {
+    line-height: 1.6em;
+    color: #555;
+}
+
+.buyTicketsContent a {
+    color: #00ACED;
+    font-weight: 500;
+}
+
+.buyTicketsContent .best a {
+    font-weight: normal;
+}
+
+    .buyTicketsContent .best a:hover {
+        color: #00C0ED;
+    }
+
+.buyTicketsContent .note a:hover {
+    color: #00C0ED;
+}
+
+* html .buyTicketsContent {
+    height: 271px;
+}
+
+    .buyTicketsContent h2 {
+        font-size: 1.6em;
+        margin: 3px 0 6px 0;
+        padding: 0;
+        font-weight: 900;
+    }
+
+    .buyTicketsContent p span {
+        color: red;
+    }
+
+    .buyTicketsContent select {
+        width: 271px;
+        margin: 2px 0;
+        font-size: 1em;
+    }
+
+    .buyTicketsContent .warning, #secondaryContainer .warning, .notOnSale {
+        color: red;
+    }
+
+    .buyTicketsContent p {
+        margin: 10px 0;
+    }
+
+        .buyTicketsContent p.seriesSlots {
+            margin-left: 10px;
+        }
+
+    .buyTicketsContent .buyTicketsTransMsg {
+        font-size: 0.85em;
+    }
+
+.buyTicketsTransMsg {
+    line-height: normal;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+#buyButton {
+    text-align: center;
+    padding: 0 0 10px 0;
+}
+
+#perfPricing {
+    padding: 0 0 10px 0;
+}
+
+#buyImportantInfo {
+    margin-top: 20px;
+    padding: 5px 12px 10px 12px;
+    background-color: #FFF;
+}
+
+    #buyImportantInfo a {
+        color: #00ACED;
+        font-weight: 500;
+    }
+
+        #buyImportantInfo a:hover {
+            color: #00C0ED;
+        }
+
+    #buyImportantInfo span {
+        color: red;
+        font-weight: bold;
+    }
+
+    #buyImportantInfo hr {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #buyImportantInfo .cc-price {
+        display: none;
+    }
+
+    #buyImportantInfo ul {
+        list-style: disc;
+        margin-left: 15px;
+        font-size: 11px !important;
+    }
+
+.buyImportantInfoContents {
+    padding-top: 5px;
+}
+
+#buyImportantInfo p {
+    font-size: 11px !important;
+}
+
+.eventPricingHeader {
+    font-size: 1.1em;
+    padding-top: 0px;
+    vertical-align: middle;
+    line-height: 27px;
+    text-align: center;
+    background-color: #007ACC;
+    height: 35px;
+    margin: 0 0 10px 0;
+}
+
+.showVenMap {
+    width: 100px;
+    display: block;
+    margin: 0 auto 15px auto;
+    text-align: center;
+    padding: 7px;
+    float: left;
+    font-size: 12px;
+}
+
+a.showVenMap:hover {
+}
+
+.eventPricingHeader h2 {
+    margin-top: 0px;
+    padding-top: 5px;
+    font-size: 1.425em;
+    color: #fff !important;
+    text-transform: uppercase;
+}
+
+#bannerHalfIsland, #islandBannerSpace, #islandBannerSpace2 {
+    clear: both;
+    width: 300px;
+    border: 1px solid #F3F3F3;
+}
+
+* + #bannerHalfIsland, * + #islandBannerSpace, * + #islandBannerSpace2 {
+    margin: 10px 0;
+}
+
+.moreEventPageInfo {
+    margin: 10px 0;
+    background-color: #f3f3f3;
+    border: 1px solid #ebebeb;
+    padding: 10px;
+    font-size: 12px;
+}
+
+table.tourDatesTable {
+    width: 100%;
+}
+
+    table.tourDatesTable tr.tourRow {
+        background-color: #FFF;
+        margin-top: 3px;
+    }
+
+    table.tourDatesTable td {
+        padding: 5px;
+    }
+
+table.runningTimesTable {
+    width: 100%;
+}
+
+    table.runningTimesTable tr.timesRow {
+        background-color: #FFF;
+        margin-top: 3px;
+    }
+
+    table.runningTimesTable td {
+        padding: 5px;
+    }
+
+    table.runningTimesTable tr.timesDisclaimerRow {
+        font-size: 10px;
+    }
+
+.wrapBodyNew #islandBannerSpace {
+    margin-bottom: 15px;
+}
+
+    .wrapBodyNew #islandBannerSpace img {
+        border: 1px solid #f3f3f3 !important;
+    }
+
+table.tableEventLocation {
+    width: 100% !important;
+}
+
+    table.tableEventLocation img {
+        border: 1px solid #ebebeb;
+    }
+
+.eventsMenuMap {
+    width: 265px;
+    padding: 15px;
+}
+
+    .eventsMenuMap img {
+        float: left;
+        margin: 0 5px 0 10px;
+    }
+
+        .eventsMenuMap img.buttonVenueLarge {
+            margin: 15px 0 0 0;
+        }
+/* Events cancelled */
+.cancelledShow {
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #fff8e7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.cancelledShow H4 {
+    color: #555;
+    font-size: 1.4em;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.cancelledShow a {
+    color: #555;
+    font-weight: 500;
+}
+
+.cancelledShow a:hover {
+    color: #DBDBDB;
+}
+
+.cancelledShow p {
+    font-size: 12px !important;
+}
+
+.cancelledShow p:last-child {
+    margin: 0px;
+}
+
+/* inner tabs for venues accordion */
+#innerTabsSmaller {
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    width: 278px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 !important;
+}
+
+    #innerTabsSmaller a {
+        background: #70A8DB url("https://premier.ticketek.co.nz/images/lightBlueRepX.gif") top left repeat-x;
+        float: left;
+        width: 91px;
+        text-align: center;
+        color: #fff !important;
+        padding: 3px 0;
+        border-right: 1px solid #fff;
+    }
+
+        #innerTabsSmaller a.activeInnerTab {
+            background: #70A8DB url("https://premier.ticketek.co.nz/images/darkBlueRepX.gif") top left repeat-x;
+            width: 91px;
+            padding: 3px 0;
+            font-weight: bold;
+        }
+
+#entitlementPassword {
+    margin-top: 5px;
+    position: relative;
+}
+
+    #entitlementPassword .accordionBar {
+        margin-top: 10px;
+    }
+
+    #entitlementPassword .borInput {
+        margin-top: 5px;
+        width: 243px;
+    }
+
+    #entitlementPassword table {
+        width: 100%;
+        position: relative;
+    }
+
+        #entitlementPassword table td.validity {
+            width: 100px;
+            height: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+            #entitlementPassword table td.validity img {
+                padding-left: 10px;
+                padding-right: 5px;
+            }
+
+        #entitlementPassword table td.footer {
+            padding-top: 5px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+            #entitlementPassword table td.footer p {
+                text-indent: 10px;
+                padding-left: 0px;
+            }
+
+    #entitlementPassword .titleBar {
+        line-height: 18px;
+        padding: 7px;
+        /* extra 35px makes total width 300px */
+        margin: 0;
+        font-size: 1.1em;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+        background-color: #EBEBEB;
+        text-align: left;
+    }
+
+    #entitlementPassword .content {
+        width: 262px;
+        padding: 0 5px 0 5px;
+        overflow: hidden;
+        background: #f3f3f3;
+    }
+
+        #entitlementPassword .content div {
+            padding: 10px 0;
+            background-color: #f3f3f3;
+        }
+
+    #entitlementPassword textarea {
+        border-color: #EBEBEB;
+        color: #000;
+        margin-top: 5px;
+        width: 243px;
+        height: 75px;
+    }
+
+    #entitlementPassword .perfPasswordValidity {
+        border: 1px solid #ec1c24;
+        margin: 10px 0;
+    }
+
+        #entitlementPassword .perfPasswordValidity .title {
+            background: #ec1c24;
+            height: 26px;
+            color: #fff;
+            padding-top: 10px;
+            padding-left: 5px;
+        }
+
+            #entitlementPassword .perfPasswordValidity .title h4 {
+                font-size: 1.0em;
+            }
+
+        #entitlementPassword .perfPasswordValidity .information {
+            background: #F1F1F2;
+            height: 25px;
+            text-align: right;
+            vertical-align: middle;
+            padding-right: 10px;
+            padding-top: 8px;
+        }
+
+
+
+/*Show page - tabs
+.proxyNav{
+	width: 640px;
+	height: 30px;
+	background: #f3f3f3;
+	border-bottom:1px solid #EBEBEB;
+	margin:0 0 10px 0;
+	}
+.tabTitles{
+	width: auto;
+	display: inline-block;
+	line-height: 30px;
+	margin:0 0 0 6px;
+	padding-top:1px;
+	}
+.tabTitles:last-child a{ remove border from last title
+	border:none;
+	}
+.tabTitles a{
+	padding:0 8px 0 0;
+	border-right:1px solid #dbdbdb;
+	font-size: 11px;
+	}
+.tabTitles a:hover{
+}
+*/
+
+
+
+
+
+
+/* Events Pricing Information
+============================================================================== */
+.eventPricing {
+    padding-top: 8px;
+    width: 298px;
+}
+
+    .eventPricing table {
+        width: 100%;
+        background-color: #FFF;
+    }
+
+.eventPricingTitlebar {
+    background: #ebebeb;
+}
+
+.eventPricingCategories {
+    width: 165px;
+    text-align: left;
+    padding: 10px 0 10px 12px;
+    font-size: 1.2em;
+}
+
+.eventPricingPriceRange {
+    width: 105px;
+    text-align: right;
+    padding: 10px 12px 10px 0;
+    font-size: 1.2em;
+}
+
+th.eventPricingCategories,
+th.eventPricingPriceRange {
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    vertical-align: text-top;
+    line-height: 1.4em;
+}
+
+.eventPricingCategories span {
+    font-weight: normal;
+}
+
+.eventPricingSeparator {
+    width: 100%;
+    background: #ebebeb;
+    height: 1px;
+    margin: 0;
+}
+/* Special Events Pages
+============================================================================== */
+
+.specialEventsInfo {
+    /*border: 1px solid #ebebeb;*/
+    margin: 1px 4px 15px 0;
+    display: block;
+    background: none;
+    font-size: 1.2em;
+}
+
+    .specialEventsInfo img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .specialEventsInfo p {
+        padding: 0px 10px 5px 10px;
+        font-size: 1.1em;
+        color: #555;
+    }
+
+    .specialEventsInfo h3 {
+        padding-left: 10px;
+    }
+
+    .specialEventsInfo div.specialEventBlurb {
+        padding: 12px;
+    }
+
+.specialEventsLinks {
+    border: 1px solid #ebebeb;
+    border-top: none;
+}
+
+#noticeBox, .noticeBox {
+    font-size: 1.1em;
+    background: #f3f3f3;
+    padding: 15px;
+    margin: 15px 0 10px 0;
+    border: 1px solid #ebebeb;
+}
+
+    #noticeBox span, .noticeBox span {
+        color: #00ACED !important;
+        font-weight: bold;
+    }
+
+    #noticeBox a, .noticeBox a {
+        color: #00ACED;
+    }
+/* 2 column special events ******************************************* */
+#specialEvent2Columns .specialEventModule {
+    width: 322px;
+    color: #555 !important;
+    font-size: 1.1em;
+    float: left;
+    margin: 0 3px 4px 1px;
+}
+
+#specialEvent2Columns .specialEventBar {
+    background: #EBEBEB;
+    padding: 6px;
+    border: 1px solid #EBEBEB;
+}
+
+#specialEvent2Columns .specialEventsLinks {
+    background-color: #FFF;
+    padding: 8px 0 4px 78px;
+    color: #555;
+    border-left: 1px solid #EBEBEB;
+    border-right: 1px solid #EBEBEB;
+    border-bottom: 1px solid #EBEBEB;
+    height: 20px;
+}
+/* 1 column wide special events */
+#specialEvent1Column .specialEventModule {
+    width: 649px;
+    color: #555;
+    font-size: 1.2em;
+    margin: 0 0 4px 0;
+}
+
+#specialEvent1Column .specialEventBar {
+    background: #ebebeb;
+    padding: 6px;
+}
+
+#specialEvent1Column .specialEventsLinks {
+    background: #fff;
+    padding: 8px 0 4px 7px;
+    margin: 0 1px;
+    color: #0c3d83;
+    height: 20px;
+}
+
+#specialEvent1Column div {
+    /*background:#fff !important;*/ /*visa page fix*/
+    ;
+}
+/* special event commons */
+.specialEventBar a {
+    font-weight: 500;
+    color: #555;
+}
+
+.specialEventsCopy {
+    padding: 6px;
+    border-left: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+}
+
+#specialEvent2Columns .specialEventsCopy {
+    height: 73px;
+}
+
+* html #specialEvent2Columns .specialEventsCopy {
+    height: 75px;
+}
+
+.specialEventsCopy img {
+    float: left;
+    margin: 0 5px 0 0;
+    border: 2px solid #ebebeb;
+}
+
+.specialEventsCopy p {
+    margin: 5px 0 10px 72px;
+}
+
+.specialEventsCopy a {
+    /*color: #0f3f81;*/
+    ;
+}
+
+.specialEventsLinks a {
+    /*color:#0c3d83;*/
+    ;
+}
+
+.specialEventsLinks img {
+    margin: -5px 5px 0 0;
+    float: left;
+    border-radius: 2px;
+}
+
+.specialEventsLinks p {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.specialEventsLinks input {
+    padding: 8px 12px;
+    width: auto;
+}
+
+/* Umbrella page child show calendar ******************************************* */
+table.showCalendar {
+    float: left;
+    margin: 10px 0 10px 15px;
+    font-size: 12px;
+    border-collapse: collapse;
+    min-height: 240px;
+    height: 240px;
+}
+
+    table.showCalendar caption {
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: left;
+        padding-bottom: 10px;
+    }
+
+.showCalendar th, .showCalendar td {
+    font-weight: bold;
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 6px;
+}
+
+.showCalendar td {
+    color: #555;
+}
+
+.showCalendar .soldout {
+    padding: 0;
+}
+
+    .showCalendar .soldout span {
+        position: relative;
+        display: block;
+        width: 27px;
+        height: 25px;
+        z-index: 1;
+    }
+
+    .showCalendar .soldout a {
+        line-height: 25px;
+        color: #555;
+    }
+
+        .showCalendar .soldout a:before {
+            content: "sold out";
+            z-index: -1;
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 0;
+            padding: 0;
+            color: #f33;
+            width: 27px;
+            height: 22px;
+            font-size: 11px;
+            font-weight: normal;
+            line-height: 11px;
+        }
+
+#specialEvent2Columns {
+    margin: 0px auto;
+}
+/* Venues Pages
+============================================================================== */
+#primaryContainer br {
+    clear: both;
+}
+
+#primaryContainerWide br {
+    clear: both;
+}
+
+#primaryVenueOverview {
+    /* background: #007ACC; */
+    border: 1px solid #ebebeb;
+    float: left;
+    width: 625px;
+    /* padding + border bring it to 656px */
+    color: #555;
+    padding: 16px 15px 16px 15px;
+}
+
+#primaryVenueOverview h1, #primaryVenueOverview .whiteHeading, #primaryVenueOverview .stateList p, #primaryVenueOverview .stateList ul li a{
+    /* color: #fff !important; */
+}
+
+.secondaryNav {
+    font-size: 1.2em;
+    color: #00ACED;
+    padding: 13px 0 8px 4px;
+    text-align: center;
+    height: 15px;
+}
+
+    .secondaryNav ul {
+        text-align: center;
+    }
+
+
+    .secondaryNav li {
+        display: inline;
+        padding: 0px 7px 0px 6px;
+        border-right: 1px solid #DBDBDB;
+    }
+
+    .secondaryNav a {
+        color: #00ACED;
+        text-transform: uppercase;
+        font-size: 0.95em;
+    }
+
+        .secondaryNav a:hover {
+            color: #00C0ED;
+        }
+
+        .secondaryNav a.activeSubItem {
+            color: #00ACED;
+            border-bottom: solid 2px #FEE949;
+            height: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+#venueInfo {
+    border: 1px solid #ebebeb;
+    margin-bottom: 0px;
+    background-color: #fff;
+    width: 622px;
+}
+
+    #venueInfo a {
+        color: #00ACED;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+#venueImg {
+    float: left;
+    width: 328px;
+    height: 188px;
+}
+
+#venueBlurb {
+    padding: 10px 0px 0 14px;
+    font-size: 1.1em;
+    width: 500px;
+    position: relative;
+    float: left;
+}
+
+    #venueBlurb span {
+        font-weight: bold;
+    }
+
+hr {
+    height: 1px;
+    border: 0;
+}
+
+div.divhr {
+    height: 20px;
+    background: url("https://premier.ticketek.co.nz/images/lineDivider.gif") repeat-x scroll center;
+}
+
+    div.divhr hr {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+.venueLetterSearch {
+    color: #65a6dc;
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 5px;
+}
+
+    .venueLetterSearch li {
+        display: inline;
+        padding: 0 5px 0 5px;
+        border-right: 1px solid #65a6dc;
+    }
+/* Venue list page */
+
+#venueList {
+    font-size: 1.1em;
+    color: #555;
+    margin: 15px 0 10px 0;
+}
+
+    #venueList table {
+        font-size: 100%;
+    }
+
+        #venueList table tr {
+            background-color: #fff;
+        }
+
+    #venueList h3 {
+        font-size: 1em;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        color: #fff;
+    }
+
+        #venueList h3 a {
+            color: white;
+        }
+
+    #venueList h2 {
+        font-size: 1.4em;
+        margin: 12px 0 5px 0;
+        padding: 0;
+        font-weight: bold;
+        color: #00ACED;
+    }
+
+    #venueList table tr th {
+        color: #555;
+        font-weight: 500;
+        border-bottom: 1px solid #DBDBDB !important;
+        padding: 6px;
+        font-size: 1.2em;
+    }
+
+    #venueList th.thLocation {
+        background: #ebebeb;
+        width: 48%;
+    }
+
+    #venueList th.thAddress {
+        background: #ebebeb;
+        width: 52%;
+    }
+
+    #venueList tr.lightBlueTr {
+        background-color: #f3f3f3;
+    }
+
+    #venueList td {
+        border-bottom: 1px solid #ebebeb !important;
+        padding: 8px;
+    }
+
+    #venueList table {
+        width: 100%;
+    }
+
+    #venueList a {
+        font-weight: 500;
+    }
+
+li.activeSearch a, a.activeSearch {
+    color: #555;
+    font-weight: bold;
+}
+
+.venueMap {
+    float: left;
+    width: 310px;
+    margin: 0;
+    padding-top: 8px;
+    background-color: #007ACC;
+}
+
+.venueMap > h3{
+    color: #fff;
+    margin-left: 5px;
+}
+
+.venueTextList {
+    float: right;
+    width: 254px;
+    padding-top: 8px;
+}
+
+    .venueTextList p {
+        font-size: 1.1em;
+    }
+
+    .venueTextList h3, .venueMap h3, .venueTextList p, .venueTextList .stateList ul li a {
+        /* margin: 0 0 0 0; */
+        padding: 0;
+        font-size: 13px;
+        /* color: #fff !important; */
+    }
+
+    .venueTextList h4 {
+        margin: 0;
+        padding: 0;
+        color: #ffd41f;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+        .venueTextList h4 a {
+            color: #ffd41f;
+        }
+
+    .venueTextList div.stateList {
+        padding: 25px 0px 15px 0px;
+        float: left;
+    }
+
+    .venueTextList ul {
+        margin: 2px 10px 15px 0;
+    }
+
+    .venueTextList li {
+        /*background:url(/images/listArrowWhite.gif) no-repeat;*/
+        /* background: url(/images/2013/listArrowGrey.gif) no-repeat; */
+        /* background-position: 1px 5px; */
+        display: block;
+        padding: 2px 0 2px 10px;
+        font-size: 1.1em;
+        list-style-type: disc;
+        list-style-position: inside;
+        display: list-item;
+    }
+
+        .venueTextList li a {
+            color: #555;
+        }
+/* venues - accordion content */
+
+.venueInfoRow {
+    padding: 0 !important;
+    font-size: 1em !important;
+}
+
+.venueInfoIcon {
+    float: left;
+    width: 55px;
+    text-align: left;
+    margin-right: 3px;
+}
+
+.venueInfoRow .venueInfoModule, .venueInfoRow .venueInfoModuleSingleColumn {
+    float: left;
+    margin: 0px 5px 0px 0px;
+    width: 135px;
+}
+
+.venueInfoRow .venueInfoModuleSingleColumn {
+    width: 531px !important;
+}
+
+.venueInfoModule h4 {
+    margin-top: 0;
+    padding-top: 0;
+}
+/* Search Results
+============================================================================== */
+.searchResultsHeader {
+    margin: -1px;
+    height: 35px;
+    background: #fff;
+    padding: 5px 15px;
+    text-transform: capitalize !important;
+}
+
+.pagination {
+    font-size: 1.1em;
+    padding: 10px 0 5px 0;
+}
+
+.paginationNew {
+    font-size: 12px;
+    margin: 0 1px;
+    background-color: #ebebeb;
+    padding: 10px 15px;
+}
+
+.paginationResults {
+    float: left;
+    width: auto;
+}
+
+.paginationList {
+    margin-left: 175px;
+    text-align: right;
+    color: #555;
+}
+
+    .paginationList a {
+        color: #00ACED;
+    }
+
+.paginationNew a {
+    color: #00ACED;
+}
+
+.paginationList li {
+    display: inline;
+    padding: 0 5px 0 5px;
+    border-right: 1px solid #555;
+}
+
+.paginationNew li {
+    border-right: 0;
+    display: inline-block;
+}
+
+    .paginationNew li.activeSearch {
+        background-color: #fee949;
+    }
+
+        .paginationNew li.activeSearch a {
+            color: #555;
+        }
+
+.venueLetterSearch .paginationList {
+    float: none;
+    margin: 0;
+    text-align: right;
+}
+
+.resultModule a {
+    color: #555;
+}
+
+.resultModule h6 {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+div.searchResultsHeader {
+    background-color: #ebebeb;
+    border-bottom: 0px;
+    color: #555;
+    font-size: 18px;
+    line-height: 36px;
+    /*font-family: Arial;*/
+    font-weight: bold;
+    position: relative;
+    height: 36px;
+    padding: 0;
+}
+
+.searchResultsHeader div#resultEvent, .searchResultsHeader div#resultLocation, .searchResultsHeader div#resultDate, .searchResultsHeader div#searchRSS {
+    position: absolute;
+    top: 0;
+}
+
+.searchResultsHeader div#resultEvent {
+    left: 15px;
+}
+
+.searchResultsHeader div#resultLocation {
+    left: 231px;
+}
+
+.searchResultsHeader div#resultDate {
+    left: 378px;
+}
+
+.searchResultsHeader div#searchRSS {
+    right: 15px;
+}
+
+#searchRSS img {
+    width: 15px;
+    height: 15px;
+}
+
+#searchNotFound p {
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+#searchNotFound li {
+    display: inline;
+    list-style-type: circle;
+    padding-right: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.resultModule {
+    border-bottom: 1px solid #ebebeb;
+    padding: 10px 0;
+}
+
+.resultModuleHover {
+    background-color: #F9F9F9;
+    border-bottom: 1px solid #F9F9F9;
+}
+
+    .resultModuleHover h6 a {
+        color: #555 !important;
+    }
+
+.noResultsMessage {
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#searchRHSInfo {
+    background: #f3f3f3;
+    padding: 15px;
+    font-size: 1.3em;
+    margin: 10px 0 20px;
+}
+
+/* 3 sections of a search result */
+
+.contentImage, .contentEvent, .contentLocation, .contentDate, .resultBuyNow {
+    float: left;
+}
+
+.contentEvent, .contentLocation, .contentDate {
+    padding: 9px 10px 8px 0px;
+}
+
+.contentEvent, .contentLocation, .contentDate {
+    width: 130px;
+    overflow: hidden;
+    margin-right: 9px;
+}
+
+.resultBuyNow {
+    width: 97px !important;
+    padding: 9px 0 20px 0;
+}
+
+    .resultBuyNow a.yellowGradientButton, .resultBuyNow a.blueGradientButton {
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 500;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 77px;
+        text-align: center;
+    }
+
+/*
+a.blueGradientButton:hover, a.yellowGradientButton:hover {
+    border-bottom: 1px solid #dbdbdb !important;
+}
+*/
+
+.contentImage {
+    width: 61px;
+    padding: 8px 11px 8px 12px;
+}
+
+    .contentImage img {
+        width: 61px;
+        height: 61px;
+        border: 1px solid #ebebeb;
+    }
+
+.contentEventAndDate, .contentEventAndDateLast {
+    float: right;
+    clear: right;
+    width: 406px;
+}
+
+.contentResultSummary {
+    float: left;
+    width: 274px !important;
+    padding: 9px 24px 8px 0;
+}
+
+    .contentResultSummary .contentLocation {
+        padding: 0px 15px 0px 0px;
+    }
+
+    .contentResultSummary .contentDate {
+        padding: 0;
+    }
+
+.resultContainer {
+    float: left;
+    position: relative;
+}
+
+.resultOtherRegion {
+    padding-bottom: 10px;
+}
+
+.resultModule .resultOtherRegion a {
+    color: #00ACED;
+}
+
+    .resultModule .resultOtherRegion a:hover {
+    }
+/* Global Pages
+============================================================================== */
+
+#globalNotice {
+    font-size: 1.1em;
+    background: #092b59 url("https://premier.ticketek.co.nz/images/myTicketekNoticeBg.jpg") top left repeat-y;
+    padding: 15px;
+    margin: 15px 0 10px 0;
+    border: 1px solid #3a5680;
+}
+
+    #globalNotice span {
+        color: #ffd41f;
+        font-weight: bold;
+    }
+
+.globalContent {
+    font-size: 1.1em;
+    color: #555;
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+    .globalContent a {
+        color: #555;
+        font-weight: 400;
+    }
+
+.globalNotice h3 {
+    color: #555;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.globalContent h4 {
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+#helpFAQWrap {
+    margin-top: 10px;
+}
+
+    #helpFAQWrap ul {
+        padding: 10px 16px 20px 16px;
+    }
+
+    #helpFAQWrap li a {
+        font-weight: bold;
+    }
+
+    #helpFAQWrap li {
+        padding-left: 12px;
+    }
+    /* nested lists */
+    #helpFAQWrap ul li ul {
+        padding: 10px 16px 0 0;
+    }
+
+        #helpFAQWrap ul li ul li {
+            background: none;
+        }
+/* High Traffic pages
+============================================================================== */
+#trafficContent {
+    background: #fff;
+    /*border: 1px solid #ebebeb;*/
+    width: 946px;
+    margin-top: 0;
+    padding: 20px 12px;
+}
+
+    #trafficContent h1 {
+        color: #555;
+        font-size: 22px;
+        margin: 0 0 10px 0;
+        font-weight: 500;
+    }
+
+.trafficNotice {
+    font-size: 1.2em;
+    background-color: #fff;
+    padding: 15px;
+    color: #555;
+}
+
+    .trafficNotice p {
+        font-size: 1.1em;
+    }
+
+#trafficContent a {
+    color: #555;
+}
+
+/* .trafficNotice h3 {
+    color: #ffd41f !important;
+    font-size: 1.2em !important;
+    margin: 0 0 10px 0 !important;
+    padding-left: 0px !important;
+} */
+
+.trafficNotice h3{
+    color: #555 !important;
+    font-size: 20px !important;
+    margin: 0 0 10px 0 !important;
+    padding-left: 0px !important;
+}
+
+.trafficNotice a {
+    color: #ffd41f;
+}
+
+#trafficContent .trafficNotice ol {
+    margin-bottom: 10px;
+}
+/* Contact us page
+====================================================================================== */
+#contactForm {
+    font-size: 1.1em;
+    margin: 0 0 10px 0;
+}
+
+    #contactForm a {
+        color: #FFD41F;
+    }
+
+    #contactForm .error {
+        color: #f00;
+    }
+
+    #contactForm input, #contactForm textarea {
+        border: 1px solid #2e5ca6;
+        font-size: 1.1em;
+        color: #0f3f81;
+        padding: 4px;
+        margin: 0px 4px 0px 0px;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    }
+
+    #contactForm .radioButtons input {
+        border: 0;
+    }
+
+    #contactForm textarea {
+        font-size: 1.1em;
+        color: #0f3f81;
+        padding: 4px;
+        margin: 0px 4px 0px 0px;
+    }
+
+    #contactForm .formSet {
+        background-color: white;
+        padding: 10px;
+        color: #0d316d;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+table.contactUsForm {
+    margin: 0;
+    width: 100%;
+}
+
+#contactForm h4 {
+    color: #FFD41F;
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0;
+}
+
+.contactUsForm td {
+    padding: 8px 4px 8px 4px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.formSet tr {
+    background-color: #e4f2fd;
+}
+
+.altColorRow {
+    margin: 0;
+    background-color: #fff;
+}
+
+    .altColorRow table tr {
+        margin: 0;
+        background-color: #fff;
+    }
+
+input.submitContactForm {
+    margin: 10px 0 0 0;
+    float: right;
+    border: 0;
+    padding: 0;
+}
+
+td.TDcontactFormLabel {
+    width: 200px;
+}
+
+textarea.contactMessage {
+    width: 340px;
+}
+
+select.selectSubCategory {
+    width: 350px;
+}
+
+input.inputContactForm {
+    width: 180px;
+}
+
+select.stateSelect {
+    width: 150px;
+}
+/* Venue Details Page - START */
+#venueMapHeader {
+    height: 36px;
+    margin-left: 0px;
+    text-align: right;
+    margin-top: 0px;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.venueDetailsMapButton {
+    padding-right: 10px;
+}
+
+.venueDetailsTop {
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+#seatMap {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: none;
+    background-color: #fff;
+}
+
+.displayVenueMap {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 622px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: auto;
+}
+
+.venueGoBack {
+    float: right;
+    padding-right: 10px;
+    padding-top: 8px;
+}
+
+.venueFaceBook {
+    float: left;
+}
+
+#divShowVenueMap {
+    float: right;
+    padding-top: 3px;
+    padding-bottom: 0px;
+}
+
+    #divShowVenueMap a {
+        padding: 5px 10px !important;
+    }
+
+#divCloseVenueMap {
+    display: none;
+    padding-top: 3px;
+    padding-bottom: 0px;
+}
+
+    #divCloseVenueMap a {
+        padding: 5px 10px !important;
+    }
+
+.VenueDetailsSubHeading {
+    /*color:#000;*/
+    ;
+}
+
+.venueSeatmapHeader {
+    color: #000;
+    height: 60px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 10px;
+    /*font-family:Arial;*/
+    font-size: 12px;
+}
+
+.perfVenueMap {
+    background: #fff;
+    vertical-align: top;
+    text-align: center;
+    width: 176px !important;
+}
+
+.seatLegend {
+    text-align: left;
+    width: 176px !important;
+}
+
+.perfVenueMap h4 {
+    font-weight: bold;
+    font-size: 1.1667em;
+    /* 14px */
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.seatLegend h4 {
+    font-weight: bold;
+    font-size: 1.1667em;
+    /* 14px */
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+/* Seat maps
+====================================================================================== */
+.viewMap {
+    width: 950px;
+}
+
+    .viewMap td {
+        padding-top: 2px !important;
+        padding-bottom: 5px !important;
+        text-align: left;
+        vertical-align: top;
+    }
+
+.toolbar {
+    background: #666;
+    color: #FFF;
+    float: left;
+    width: 100%;
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 2px solid #FFD520;
+}
+
+.infoToolbar {
+    background: #666;
+    color: #FFF;
+    float: left;
+    width: 100%;
+    height: 33px;
+    line-height: 33px;
+}
+
+    .infoToolbar .disclaimer {
+        color: #fff !important;
+        font-weight: bold;
+        float: right;
+        margin-right: 5px;
+    }
+
+.toolbarTitle {
+    font-size: 18px;
+    font-weight: bold;
+    width: 270px;
+    float: left;
+    line-height: 33px;
+    vertical-align: middle;
+    margin-left: 18px;
+}
+
+.toolbarSubTitle {
+    font-weight: bold;
+    line-height: 33px;
+    display: inline-block;
+}
+
+.toolbarSeperator {
+    border-left: 2px solid #ACACAD;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.closeButton {
+    display: inline-block;
+    line-height: 33px;
+    vertical-align: middle;
+    cursor: pointer;
+    float: right;
+    margin: 0px 14px 0 20px;
+}
+
+    .closeButton img {
+        vertical-align: middle;
+    }
+
+.sectionInfo {
+    width: 473px;
+    float: left;
+    height: 100%;
+    min-height: 100px;
+}
+
+.sectionInfoContent, .seatingInfoContent {
+    float: left;
+}
+
+    .sectionInfoContent ul, .seatingInfoContent ul {
+        margin: 10px 0 0 0px;
+        float: left;
+        padding-left: 18px;
+        width: 413px;
+    }
+
+    .sectionInfoContent li, .seatingInfoContent li {
+        margin: 0 0 5px 0;
+    }
+
+.seatInfo {
+    min-height: 100px;
+    border-left: 1px solid #999;
+    width: 449px;
+    float: left;
+    height: 100%;
+}
+
+.subTitlebar {
+    background: #EBEBEB;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 18px;
+    width: 413px;
+    float: left;
+    line-height: 26px;
+}
+
+.seperator {
+    border-left: 2px solid #231F20;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#largeSeatAreaMap {
+    margin-right: 1px;
+    background-color: #fff;
+    color: #000;
+    font-size: 12px;
+}
+
+    #largeSeatAreaMap .toolbar .seatAreaMapToolbarTitle {
+        font-weight: bold;
+        font-size: 1.5em;
+        padding-left: 18px;
+        line-height: 33px;
+        float: left;
+    }
+
+    #largeSeatAreaMap .categoryBar {
+        display: block;
+        padding: 5px 18px;
+        font-weight: bold;
+        height: 25px;
+    }
+
+        #largeSeatAreaMap .categoryBar label {
+            float: left;
+        }
+
+        #largeSeatAreaMap .categoryBar select {
+            margin-left: 5px;
+        }
+
+        #largeSeatAreaMap .categoryBar a, #largeSeatAreaMap .categoryBar a:hover {
+            float: right;
+            display: block;
+            padding-left: 10px;
+            line-height: 1.8em;
+            color: #000;
+        }
+
+    #largeSeatAreaMap .toolbar {
+        float: none;
+    }
+
+    #largeSeatAreaMap .toolbarTitle {
+        float: none;
+        width: inherit;
+    }
+
+    #largeSeatAreaMap #seatAreaMapImages {
+        padding: 15px;
+    }
+
+        #largeSeatAreaMap #seatAreaMapImages img {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+/* Social Media links
+====================================================================================== */
+
+#showSocial {
+    float: none;
+    /*border-bottom: 1px solid #EBEBEB;*/
+    width: 300px;
+    margin: 5px 0px;
+    /*padding: 5px 43px 5px 0px;*/
+    text-align: center;
+    background-color: #F3F3F3;
+    display: none;
+}
+
+    #showSocial.showSocialUmbrella {
+        float: right;
+        width: 275px;
+        /*margin-right:-20px;*/
+        background-color: transparent;
+    }
+
+    #showSocial .addthis_native_toolbox {
+        padding-top: 5px;
+    }
+
+    #showSocial .addthis_button_facebook_like,
+    #showSocial .addthis_button_tweet,
+    #showSocial .addthis_counter {
+        /*float: none;*/
+        display: inline-block !important;
+        position: relative;
+        padding: 0;
+        z-index: 12;
+    }
+
+    #showSocial .addthis_button_tweet {
+        width: 90px;
+    }
+
+    #showSocial .addthis_button_facebook_like {
+        width: 90px;
+    }
+
+.addthis {
+    margin-left: 0;
+}
+/*po.st*/
+.ra1-pw-popup .ra1-pw-popup-title {
+    Xdisplay: none !important;
+    background-color: #fff !important;
+    color: #00aced !important;
+    border-radius: 0px;
+    border-bottom: 1px solid #bababa;
+}
+
+.ra1-pw-popup .ra1-pw-popup.pw-popup-type_simplelist {
+    width: 150px;
+    border: 1px solid #bababa;
+    background-color: #fff;
+}
+
+.ra1-pw-popup ul.ra1-pw-popup__ul li {
+    width: 98%;
+}
+
+.ra1-pw-popup .ra1-pw-popup, .ra1-pw-popup-i, .ra1-pw-popup .ra1-pw-popup-i > *:last-child {
+    border-radius: 0px;
+}
+
+body .ra1-pw-popup.pw-popup-type_simplelist {
+    min-width: 150px;
+    width: 150px;
+    padding: 0px;
+    border-radius: 0px;
+}
+
+body .ra1-pw-popup.pw-popup-type_extendlist {
+    min-width: 450px;
+    width: 450px;
+}
+
+.ra1-pw-popup.ra1-pw-popup.pw-popup-type_extendlist ul.ra1-pw-popup__ul li {
+    width: 31%;
+}
+
+.ra1-pw-popup .ra1-pw-popup-footer {
+    background-color: #fff;
+}
+
+.ra1-pw-popup .ra1-pw-popup-i {
+    border: 0px;
+}
+
+.ra1-pw-popup ul.ra1-pw-popup__ul {
+    border-bottom: 1px solid #bababa;
+}
+/**************** What's on control ****************/
+
+#whatsOn {
+    margin: 25px 0;
+}
+
+    #whatsOn a {
+        line-height: 18px;
+        font-size: 14px;
+        color: #555;
+        font-weight: 400;
+    }
+
+        #whatsOn a:hover {
+        }
+
+    #whatsOn ul {
+        background-color: #F3F3F3;
+        padding: 10px;
+        border: 1px solid #EBEBEB;
+    }
+
+    #whatsOn li {
+        padding-bottom: 10px;
+    }
+
+        #whatsOn li:last-child {
+            padding-bottom: 0px;
+        }
+
+/**************** Event Modules ****************/
+.eventModule {
+    float: left;
+    width: 191px;
+    margin: 0px 11px 13px 0px;
+    border: 1px solid #EBEBEB;
+    background-color: #F3F3F3;
+    padding: 1px;
+    position: relative;
+}
+
+    .eventModule a, .eventModule img {
+        display: block;
+    }
+
+.eventModuleCopy {
+    padding: 5px;
+    font-size: 12px;
+    background-color: #f3f3f3;
+}
+
+.personalisedSmallImages .eventModuleCopy {
+    padding: 5px;
+}
+
+.eventModule:hover .eventModuleCopy, .eventModuleCopyHover {
+    border-top: 0;
+}
+
+.personalisedSmallImages .eventModule:hover .eventModuleCopy, .eventModuleCopyHover {
+    border-top: 0;
+    padding-top: 5px;
+}
+
+.eventModuleCopy a {
+    height: 34px;
+    color: #555;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.eventModule img {
+    width: 189px;
+    height: 88px;
+    margin: 0 auto;
+}
+/* Get tickets rollovers
+=======================================================================================*/
+.eventModule:hover .getTickets, .eventModule .rightArrowMargin {
+    display: block;
+    font-weight: 500;
+    position: absolute;
+    top: 0px;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+}
+
+.eventModule .getTickets, .eventModule:hover .rightArrowMargin {
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+.eventModuleCopy a {
+    position: relative;
+}
+
+.eventModuleCopy .getTickets strong {
+    font-weight: 500;
+    background: #428226;
+    color: #FFF !important;
+    line-height: 35px;
+    display: block;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+}
+
+.rightArrowMargin strong {
+    font-weight: 500;
+}
+
+.getTickets {
+    font-size: 16px;
+    background: #428226;
+    color: #FFF !important;
+    line-height: 35px;
+    display: block;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+/* My events
+============================================================================== */
+#personalisedContainer {
+    margin-left: 15px;
+}
+
+    #personalisedContainer h1 span.highlight {
+        color: #fff;
+    }
+
+.personalisedLargeImages, .personalisedSmallImages {
+    clear: both;
+}
+
+    .personalisedLargeImages .eventModule a {
+        position: relative;
+        display: block;
+        /*	padding-right: 10px;*/
+    }
+
+        .personalisedLargeImages .eventModule a .notification {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 57px;
+            height: 57px;
+        }
+
+    .personalisedSmallImages .eventModule img {
+        float: left;
+        width: 61px;
+        height: 61px;
+    }
+
+    .personalisedSmallImages .eventModule .eventModuleCopy {
+        float: right;
+        width: 118px;
+        height: 51px;
+    }
+
+    .personalisedSmallImages .eventModuleCopy .rightArrowMargin {
+        width: 115px;
+        margin-right: 10px;
+        font-weight: 500;
+    }
+
+    .personalisedSmallImages .eventModule .eventModuleCopy a {
+        height: 51px;
+        position: relative;
+    }
+
+    .personalisedSmallImages .eventModule .eventModuleCopy .getTickets {
+        line-height: 51px; /*control position of get tickets*/
+        width: 118px;
+        padding: 0;
+    }
+
+    .personalisedSmallImages .eventModule .eventModuleCopy {
+        height: 51px;
+    }
+
+.seeMoreLinkContainer {
+    clear: both;
+    margin: 0 15px 15px 0;
+    text-align: center;
+}
+
+    .seeMoreLinkContainer a {
+        display: inline-block;
+        margin: 5px 10px;
+        padding: 5px 30px;
+        font-weight: bold;
+        font-size: 14px;
+        color: #00ACED;
+        border: 1px solid #00ACED;
+    }
+
+        .seeMoreLinkContainer a:hover {
+            color: #00C0ED;
+            border: 1px solid #00C0ED;
+        }
+
+/* Visa Platinum Custom Content
+====================================================================================== */
+
+.vplatimpinfo {
+    display: none;
+}
+/* Overlap Presale Codes
+====================================================================================== */
+.vent-content, .vfla-content, .plat-content, .mobi-content, .mytk-content, .mmbr-content, .fron-content, .fanc-content, .tixa-content, .racq-content, .pond-content, .amex-content, .staf-content, .opts-content, .mban-content, .fitt-content, .wait-content, .mcpp-content, .chug-content, .spon-content, .last-content, .nrma-content, .qant-content, .face-content, .mast-content, .sunc-content, .conc-content {
+    display: none;
+}
+/* Live Nation Platinum Seats
+====================================================================================== */
+#platSeats {
+    background: url("https://premier.ticketek.co.nz/images/") top center repeat-x;
+    height: 45px;
+    width: 300px;
+    cursor: pointer;
+    display: none;
+}
+    /*
+#platSeats.platSeatsGeneral {
+       background-image:  url(/images/btn_platinumSeatsOff.png);
+	   margin-bottom: -15px;
+}
+*/
+
+    #platSeats.platSeatsPremium {
+        background-image: url("https://premier.ticketek.co.nz/images/btn_platinumSeatsOn.png");
+        margin-bottom: -15px;
+    }
+/* AO view
+====================================================================================== */
+
+.secureFooterText a {
+    color: #0f3f81;
+}
+/* Confirmation Page
+====================================================================================== */
+
+.ninerewardsbanner {
+    width: 890px;
+    height: 120px;
+    border: 0px;
+}
+
+/*============================================================*/
+
+/*Events - Single Column
+#eventInfoWrap .columnLeft {
+	margin:0 10px 0 0;
+	float:none;
+	width:640px;
+}
+#eventInfoWrap .columnRight {
+	margin:0;
+	float:none;
+	width:640px;
+	position:relative;
+}
+.eventImg > img:first-of-type {
+	width:640px  !important;
+	height:280px !important;
+}
+.columnLeft #showSocial{
+	float:left;
+	height:26px;
+	border: 1px solid #ebebeb;
+	border-right:none;
+	padding-left: 10px;
+	padding-top: 0px;
+	width:313px;
+	text-align:left;
+	}
+#showDisability{
+	float:right;
+	border: 1px solid #ebebeb;
+	border-left:none;
+	text-align:right;
+	margin:5px 0 !important;
+	padding-right:10px;
+	}*/
+.eventImg img {
+    border: none;
+    height: 170px;
+    width: 298px;
+}
+
+/*
+#bannerHalfIsland{
+	display:none;
+}
+.cancelledShow{
+	position:absolute;
+	top:100%;
+	width:100%;
+}
+
+accordian override
+#eventsPageContainer #accordionMedBlue .openedBar, #eventsPageContainer #accordionMedBlue .closedBar{
+	font-weight: 500;
+	margin: 10px 0px 0px 0px;
+	padding: 10px 5px 2px 10px !important;
+	background-color: #F3F3F3;
+	color: #555;
+	background-image: none !important;
+	text-transform: uppercase;
+	width: 283px;
+	height: 28px;
+	border: 1px solid #ebebeb;
+	vertical-align: middle;
+	font-size: 15px;
+}
+#eventsPageContainer #accordionMedBlue .openedBar .arrow{
+	width: 0;
+	height: 0;
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-bottom: 15px solid #dbdbdb;
+	float: right;
+	margin-top: -17px;
+	margin-right: 5px;
+}
+#eventsPageContainer #accordionMedBlue .closedBar .arrow{
+	width: 0;
+	height: 0;
+	border-left: 9px solid transparent;
+	border-right: 9px solid transparent;
+	border-top: 15px solid #dbdbdb;
+	float: right;
+	margin-top: -17px;
+	margin-right: 5px;
+}
+
+
+*/
+
+/*Contact form overrides*/
+#specialEvent1Column div {
+    background: none !important;
+}
+
+body body {
+    background: none !important;
+}
+
+#specialEvent1Column div iframe {
+    background: none !important;
+}
+
+div.rn_list_form {
+    color: #555 !important;
+}
+
+#slotPerformanceSelector {
+    clear: both;
+}
+
+    #slotPerformanceSelector .sectionTitle {
+        height: inherit;
+        margin-bottom: 10px;
+    }
+
+    #slotPerformanceSelector h3.sectionHeading {
+        float: none;
+        font-weight: normal;
+        font-size: 14px;
+        padding: 8px 12px;
+        margin: 0 !important;
+    }
+
+#slots {
+    height: 585px;
+    position: relative;
+}
+
+.slotRow {
+    /*left: -680px;
+    overflow: hidden;
+    position: absolute;*/
+    width: 1000px;
+    top: 20px;
+}
+
+.slot.eventsPageSection {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0);
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 15px;
+    width: 311px;
+}
+/*.slot.eventsPageSection:second {
+	//margin: 0 15px;
+	border: 1px solid red;
+
+}
+.slot.eventsPageSection:last-child{
+        margin-right: 0px;
+    }
+
+.slotRow {
+    float: left;
+    overflow: hidden;
+    width: 1000px;
+}
+/*
+/*.slot {
+    float: left;
+    width: 320px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;*/ /*deliberately set for consistent sizing, generally overriden by .eventsPageSection style
+
+ .slotSpacer {
+    float: left;
+    width: 24px;
+    height: 10px;
+}*/
+
+/*21px for 2 spacers, 1st has 10, 2nd (4th of all children) has 11px, last spacer (at end of row)
+    should not be shown (delivberately use 6th child not last or spacer row not shown)*/
+.slotSpacer:nth-of-type(4) {
+    //width: 20px;
+}
+
+.slotSpacer:nth-of-type(6) {
+    display: none;
+}
+
+#slotChoiceSubmit {
+    position: relative;
+    text-align: right;
+    padding: 12px;
+    margin: 20px 0;
+    clear: both;
+}
+
+    #slotChoiceSubmit input {
+        /*position: absolute;*/
+        top: 4px;
+        right: -326px;
+    }
+
+#slotPerformanceSelector h4.sectionTitle {
+    font-size: 16px;
+    margin: 0;
+    padding: 6px 12px;
+    text-align: left;
+}
+
+#slotPerformanceSelector div.sectionTitle {
+    padding: 8px;
+}
+
+#slotPerformanceSelector .sectionTitle a {
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 48%;
+    display: inline-block;
+    *display: inline;
+}
+
+#slotPerformanceSelector .eventImg {
+    margin-bottom: 6px;
+}
+
+#slotPerformanceSelector .eventPricingHeader h5 {
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 35px;
+    height: 35px;
+    vertical-align: middle;
+    font-size: 1.425em;
+    color: #FFF;
+}
+
+#slotPerformanceSelector .buyTicketsContent .buyTicketsInformation {
+    padding-bottom: 12px;
+}
+
+.slotPerformanceChoices {
+    border: 1px solid #e5e5e5;
+    padding: 4px 8px;
+    height: 172px;
+    overflow-y: auto;
+}
+
+    .slotPerformanceChoices label {
+        display: block;
+        margin: 4px 0 4px 20px;
+    }
+
+    .slotPerformanceChoices div {
+        margin: 4px 0;
+    }
+
+    .slotPerformanceChoices input {
+        float: left;
+        margin-left: -20px;
+        margin-right: 7px;
+    }
+
+#slotPerformanceSelector .eventsPageSectionInner {
+    border: solid 1px #efefef;
+    text-align: center;
+    padding: 5px 0;
+}
+
+    #slotPerformanceSelector .eventsPageSectionInner .eventPricingHeader, #slotPerformanceSelector .buyTicketsContent {
+        width: 298px;
+        margin: 0 auto;
+    }
+
+.faqsAnswers a {
+    color: #00ACED;
+    font-weight: 500;
+}
+
+.perfSelecterNote {
+    font-size: 1.2em;
+}
+
+/* Fast Check - Start */
+.fastCheck {
+    padding-top: 13px;
+    padding-left: 0;
+    line-height: 4px;
+    padding-right: 0;
+}
+
+    .fastCheck .fastCheckGo {
+        font-size: 15px;
+    }
+
+.fastCheckGo span, .fastCheckGo select {
+    margin-right: 8px;
+}
+
+.fastCheck .fastCheckGo .fastCheckQuantity {
+    width: 20%;
+    font-size: 13px;
+}
+
+.fastCheck .goButton {
+    width: auto;
+    margin-top: 10px;
+    padding: 10px 29px;
+}
+
+.fastCheck .fastCheckSeparator {
+    padding-top: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #dbdbdb;
+    line-height: 0;
+    margin-bottom: 20px;
+}
+
+    .fastCheck .fastCheckSeparator span {
+        background: #f3f3f3;
+        padding: 0 5px;
+    }
+
+/* Fast Check - End */
+
+.ErrorInformation span {
+    background: #FFF;
+    font-size: 12px;
+    color: #FF0000;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+    line-height: normal;
+}
+
+/*Brand page*/
+.brandLeft {
+    color: #555;
+    font-size: 12px;
+}
+
+    .brandLeft p {
+        margin-bottom: 20px;
+    }
+
+    .brandLeft img {
+        float: left;
+    }
+
+    .brandLeft .bannerText {
+        border: 1px solid #EBEBEB;
+        padding: 30px 75px 20px 20px;
+        width: 548px;
+        float: left;
+        margin-bottom: 20px;
+    }
+
+        .brandLeft .bannerText ul {
+            margin-left: 2px;
+        }
+
+        .brandLeft .bannerText li {
+            margin-bottom: 2px;
+        }
+
+            .brandLeft .bannerText li a {
+                background: url("https://premier.ticketek.co.nz/content/brand/Relaunch_Arrow.jpg") no-repeat 0px 5px;
+                color: #555;
+                padding-left: 10px;
+            }
+
+    .brandLeft .bannerModule {
+        margin-bottom: 15px;
+    }
+
+    .brandLeft .bannerHeader {
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #00ACED;
+    }
+
+.brandRight #islandBannerSpace {
+    background-color: #FFF;
+    border-left: 0 none;
+    left: -33px;
+    padding: 30px 20px 20px 20px;
+    position: absolute;
+    top: 0;
+}
+
+#androidSearchPageBannerRHC {
+    height: 450px;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.nogo b {
+    background-color: #ffffff;
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+.pricePer {
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.optCont {
+    margin: 0 auto;
+    border: 1px solid #f1f1f1;
+}
+
+    .optCont .opt {
+        background-color: #f1f1f1;
+        color: #000;
+        padding: 10px;
+    }
+
+        .optCont .opt h3 {
+            margin: 10px 0 20px;
+            font-size: 26px;
+            color: #000;
+        }
+
+    .optCont p {
+        margin: 0 0 10px;
+        font-size: 12px;
+    }
+
+    .optCont #switch {
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    .optCont .switchText, .switches {
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    .optCont .switches {
+        border: 1px solid #f1f1f1;
+        background-color: #fff;
+        width: 88px;
+        text-align: right;
+        cursor: pointer;
+    }
+
+    .optCont .switchText {
+        margin-right: 10px;
+    }
+
+    .optCont .switches div {
+        padding: 4px 12px;
+        display: none;
+        width: 20px;
+    }
+
+    .optCont .off {
+        background: #d9534f none repeat scroll 0 0;
+        color: #fff;
+        text-align: left;
+    }
+
+    .optCont .on {
+        background: #5cb85c none repeat scroll 0 0;
+        color: #fff;
+    }
+
+    .optCont .switches .display {
+        display: inline-block;
+    }
+
+
+.linked-customer-selection h6 {
+    font-size: 1em;
+    margin: 1em 0 .4em 0;
+}
+
+.linked-customer-selection .linked-customer-include label {
+    font-weight: bold;
+}
+
+.linked-customer-selection .linked-customer-group label {
+    font-weight: bold;
+}
+
+    .linked-customer-selection .linked-customer-group label span {
+        font-weight: normal;
+    }
+
+.ui-dialog {
+    background-color: #fff;
+    padding: 10px;
+    z-index:100;
+}
+
+.ui-dialog-content {
+    padding: 8px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #aaaaaa;
+    opacity: .6/*{opacityOverlay}*/;
+    filter: Alpha(Opacity=30)/*{opacityFilterOverlay}*/; /* support: IE8 */
+}
+
+.ui-widget-shadow {
+    margin: -8px /*{offsetTopShadow}*/ 0 0 -8px /*{offsetLeftShadow}*/;
+    padding: 8px /*{thicknessShadow}*/;
+    background: #aaaaaa;
+    opacity: .6 /*{opacityShadow}*/;
+    filter: Alpha(Opacity=30) /*{opacityFilterShadow}*/; /* support: IE8 */
+    border-radius: 8px /*{cornerRadiusShadow}*/;
+}
+
+.no-close .ui-dialog-titlebar-close, .gmd-dialog .ui-dialog-titlebar-close {
+    display: none;
+}
+
+.no-title .ui-dialog-titlebar, .gmd-dialog .ui-dialog-titlebar {
+    display: none;
+}
+
+.gmd-dialog.ui-dialog {
+    box-shadow: 0 -2px 25px 0 rgba(0, 0, 0, 0.15), 0 13px 25px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+}
+
+    .gmd-dialog.ui-dialog .ui-dialog-content {
+        padding: 0;
+        font-size: 14px;
+        font-family: 'Open Sans', Arial, Helvetica, Sans-serif;
+        color: #888;
+    }
+
+.gmd-dialog .gmd-dialog-content {
+    padding: 24px;
+}
+
+    .gmd-dialog .gmd-dialog-content h1 {
+        margin: 0 0 20px 0;
+        padding: 0;
+        font-size: 16px;
+        text-transform: none;
+        font-weight: 700;
+        color: #555;
+    }
+
+    .gmd-dialog .gmd-dialog-content p {
+        margin: 20px 0 0 0;
+        padding: 0;
+    }
+
+.gmd-dialog .gmd-dialog-actions {
+    padding: 8px;
+    float: right;
+}
+
+    .gmd-dialog .gmd-dialog-actions a {
+        display: inline-block;
+        margin-left: 8px;
+        padding: 11px 8px;
+        min-width: 48px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+        color: #00ACED;
+        outline: none;
+    }
+
+#childLinkAddSection h2,
+#linkedCustomerGroupDialog h2,
+#childLinkAddSection h3,
+#linkedCustomerGroupDialog h3 {
+    text-transform: uppercase;
+    color: #00ACED;
+    font-weight: 700;
+}
+
+#childLinkAddSection h3,
+#linkedCustomerGroupDialog h3 {
+    font-size: 1.4em;
+}
+
+#linkedCustomerGroupDialog ul {
+    text-align: right;
+}
+
+#linkedCustomerGroupDialog li {
+    display: inline-block;
+    margin: 10px;
+}
+
+#linkedCustomerGroupDialog label {
+    display: inline-block;
+    min-width: 120px;
+}
+
+#linkedCustomerGroupDialog li button[type="submit"] {
+    padding: 7px 16px;
+}
+
+.customerLinks button,
+#linkedCustomerGroupDialog button[type="submit"],
+#linkedCustomerGroupDialog input[type="reset"],
+#linkedCustomerGroupDialog input[type="button"],
+#linkedCustomerGroupDialog input[type="submit"],
+.customerLinks ul button[type=button].submit-button {
+    color: #fff;
+    background-color: #007ACC;
+    text-transform: uppercase;
+    font-weight: normal;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    padding: 8px 12px;
+}
+
+    .customerLinks button[disabled],
+    #linkedCustomerGroupDialog button[type="submit"][disabled],
+    #linkedCustomerGroupDialog input[type="reset"][disabled],
+    #linkedCustomerGroupDialog input[type="button"][disabled],
+    #linkedCustomerGroupDialog input[type="submit"][disabled],
+    .customerLinks ul button[type=button][disabled].submit-button {
+        color: #fff;
+        background-color: #aaa;
+        cursor: unset;
+    }
+
+.customerLinks table button,
+.customerLinks ul button[type=button],
+#linkedCustomerGroupDialog button {
+    color: #00ACED;
+    background-color: transparent;
+    font-weight: 700;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+section.customerLinks {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.customerLinks ul {
+    text-align: right;
+}
+
+.customerLinks li {
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.customerLinks label,
+.customerLinks .ui-dialog p span:first-child {
+    display: inline-block;
+    min-width: 120px;
+}
+
+.customerLinks input[type=text],
+#linkedCustomerGroupDialog input[type=text] {
+    width: 250px;
+    font-size: 1.1em;
+    padding: 3px 1px;
+}
+
+.customerLinks table {
+    margin-bottom: 1em;
+}
+
+.customerLinks th,
+#linkedCustomerGroupDialog th {
+    background-color: #007ACC;
+    color: #fff;
+    font-weight: 700;
+}
+
+    .customerLinks th:nth-child(1) {
+        width: 250px;
+    }
+
+    .customerLinks th:nth-child(2) {
+        width: 250px;
+    }
+
+    .customerLinks th:last-child {
+        width: 125px;
+        text-align: center;
+    }
+
+.customerLinks td:last-child {
+    text-align: center;
+}
+
+#childLinkAddSection ul {
+    width: 379px;
+}
+
+#linkedCustomerGroupSection table {
+    width: 100%;
+}
+
+#linkedCustomerGroupSection th:nth-child(2) {
+    width: unset;
+}
+
+#linkedCustomerGroupSection th:nth-child(3) {
+    width: 80px;
+}
+
+#linkedCustomerGroupSection th:nth-child(3),
+#linkedCustomerGroupSection td:nth-child(3) {
+    text-align: center;
+}
+
+#linkedCustomerGroupDialog table {
+    width: 100%;
+}
+
+#linkedCustomerGroupDialog th:first-child {
+    width: 50px;
+}
+
+#linkedCustomerGroupDialog th:nth-child(2),
+#linkedCustomerGroupDialog th:last-child {
+    width: unset;
+}
+
+#linkedCustomerGroupDialog th:first-child,
+#linkedCustomerGroupDialog td:first-child {
+    text-align: center;
+}
+
+#linkedCustomerGroupDialog th:last-child,
+#linkedCustomerGroupDialog td:last-child {
+    text-align: left;
+}
+
+.customerLinks .error {
+    color: #990000;
+}
+
+.delivery-dialog .ui-dialog-titlebar-close {
+    background: url("https://premier.ticketek.co.nz/images/button_closeNew.png") no-repeat;
+    outline:0;
+    top: -10px;
+    right: -10px;
+    border: 0;
+    overflow: hidden;
+    height: 26px;
+    width: 26px;
+    text-indent: -9999em;
+    position: absolute;
+}
+ 
+.delivery-dialog .ui-dialog-content {
+    font-size: 14px;
+}
+ 
+.delivery-dialog table {
+    width: 100%;
+    border-collapse:collapse
+}
+ 
+.delivery-dialog tbody tr:nth-child(even) {
+    background-color: #ebebeb;
+}
